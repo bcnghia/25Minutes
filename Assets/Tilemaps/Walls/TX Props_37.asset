@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TX Props_37
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: -675062422, guid: 8a4a03d3952a3744791d4caf4fb47e1e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.57047415, g: 0.9056604, b: 0.55877537, a: 1}
   m_Transform:
     e00: 1
     e01: 0

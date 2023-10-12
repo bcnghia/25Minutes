@@ -197,7 +197,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13, y: 3}
+        - {x: -13, y: -26}
+        - {x: 13, y: -26}
+        - {x: 13, y: 3}
       tessellationDetail: 0
       bones: []
       spriteID: d6e8e68d420542549a81d9e126e27db9
@@ -239,7 +243,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -28, y: 4.5}
+        - {x: -28, y: -20.5}
+        - {x: 28, y: -20.5}
+        - {x: 28, y: 4.5}
       tessellationDetail: 0
       bones: []
       spriteID: cb26e34df983047429708b67ca1fc4dc
@@ -281,7 +289,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 12.5, y: 8}
+        - {x: -13.5, y: 8}
+        - {x: -14.5, y: -11}
+        - {x: -18.5, y: -36}
+        - {x: 18.5, y: -36}
+        - {x: 13.5, y: -10}
       tessellationDetail: 0
       bones: []
       spriteID: 06c08bb8e0c2c3649b44996c739273fa
@@ -386,7 +400,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13, y: 3}
+        - {x: -13, y: -33}
+        - {x: 13, y: -33}
+        - {x: 12, y: 3}
       tessellationDetail: 0
       bones: []
       spriteID: b6254f8bdc4eff64ca13347a1dd75163
@@ -428,7 +446,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -32, y: 8}
+        - {x: -32, y: -18}
+        - {x: 32, y: -18}
+        - {x: 32, y: 8}
       tessellationDetail: 0
       bones: []
       spriteID: 8a068ffbec5af2045bfdc2a6be8b31c1
@@ -449,7 +471,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13.5, y: 25.5}
+        - {x: -13.5, y: -21.5}
+        - {x: -8.5, y: -30.5}
+        - {x: 13.5, y: -30.5}
+        - {x: 13.5, y: 18.5}
+        - {x: -1.5, y: 19.5}
       tessellationDetail: 0
       bones: []
       spriteID: c7f314d258698554285a107f9c051afc
@@ -491,7 +519,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -11, y: 6.5}
+        - {x: -11, y: -18.5}
+        - {x: 11, y: -18.5}
+        - {x: 11, y: 6.5}
       tessellationDetail: 0
       bones: []
       spriteID: 2859d73fde91a574eae0b98558952e51
@@ -722,7 +754,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 12.5}
+        - {x: -16, y: -38.5}
+        - {x: 16, y: -38.5}
+        - {x: 16, y: 12.5}
       tessellationDetail: 0
       bones: []
       spriteID: 262403a393a06f14c87e98c12013aa4f
@@ -785,7 +821,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -15, y: 3.5}
+        - {x: -15, y: -20.5}
+        - {x: 15, y: -20.5}
+        - {x: 15, y: 3.5}
       tessellationDetail: 0
       bones: []
       spriteID: ce3d4b01fee408342b9b7e6be67c7bcc
@@ -806,7 +846,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 5.5}
+        - {x: -16, y: -28.5}
+        - {x: 16, y: -28.5}
+        - {x: 16, y: 5.5}
       tessellationDetail: 0
       bones: []
       spriteID: ceae2af217480774ab912aab9d949f9e
@@ -827,7 +871,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -15, y: 5.5}
+        - {x: -15, y: -14.5}
+        - {x: 15, y: -14.5}
+        - {x: 15, y: 5.5}
       tessellationDetail: 0
       bones: []
       spriteID: 50fca37cd7fcfa546beaeaad53fdb384
@@ -953,7 +1001,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13, y: 2}
+        - {x: -13, y: -20}
+        - {x: 13, y: -20}
+        - {x: 13, y: 2}
       tessellationDetail: 0
       bones: []
       spriteID: 85c801d27a637b746bbdf6b13a740c87
@@ -1016,7 +1068,24 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -27.5, y: 17.5}
+        - {x: -27.5, y: -16.5}
+        - {x: -17.5, y: -23.5}
+        - {x: -12.5, y: -24.5}
+        - {x: 26.5, y: -24.5}
+        - {x: 27.5, y: -19.5}
+        - {x: 27.5, y: 17.5}
+      - - {x: -11.5, y: 1.5}
+        - {x: -9.5, y: 3.5}
+        - {x: -10.5, y: 1.5}
+        - {x: -7.5, y: -0.5}
+        - {x: -8.5, y: 0.5}
+      - - {x: 10.5, y: 1.5}
+        - {x: 9.5, y: 4.5}
+        - {x: 12.5, y: 1.5}
+        - {x: 8.5, y: -0.5}
+        - {x: 9.5, y: -1.5}
       tessellationDetail: 0
       bones: []
       spriteID: 7b8ff64ad52794d47b75c15549c0aa87

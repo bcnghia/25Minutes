@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,9 +11,10 @@ public class PlayerMovement : MonoBehaviour
     Vector2 moveDir;
 
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -33,9 +34,14 @@ public class PlayerMovement : MonoBehaviour
 
         moveDir = new Vector2(moveX, moveY).normalized;
 
-        animator.SetFloat("Horizontal", moveDir.x);
-        animator.SetFloat("Vertical", moveDir.y);
-        animator.SetFloat("Speed", moveDir.sqrMagnitude);
+        if (moveDir.x != 0 || moveDir.y != 0)
+        {
+            animator.SetFloat("Horizontal", moveDir.x);
+            animator.SetFloat("Vertical", moveDir.y);
+
+            animator.SetBool("IsWalking", true);
+        }
+        else animator.SetBool("IsWalking", false);
     }
     void Move()
     {
