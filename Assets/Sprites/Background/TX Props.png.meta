@@ -472,12 +472,13 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -13.5, y: 25.5}
+      - - {x: -13.5, y: 18.5}
         - {x: -13.5, y: -21.5}
         - {x: -8.5, y: -30.5}
         - {x: 13.5, y: -30.5}
-        - {x: 13.5, y: 18.5}
-        - {x: -1.5, y: 19.5}
+        - {x: 13.5, y: 13.5}
+        - {x: -2.5, y: 13.5}
+        - {x: -6.5, y: 18.5}
       tessellationDetail: 0
       bones: []
       spriteID: c7f314d258698554285a107f9c051afc
@@ -670,7 +671,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13.5, y: 7}
+        - {x: -13.5, y: 1}
+        - {x: -4.5, y: -16}
+        - {x: 0.5, y: -16}
+        - {x: 13.5, y: 2}
+        - {x: 13.5, y: 7}
       tessellationDetail: 0
       bones: []
       spriteID: 4e4124ffc3fa08b429704e447e50fa52
@@ -733,7 +740,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: 17.5}
+        - {x: -16, y: -28.5}
+        - {x: 16, y: -28.5}
+        - {x: 16, y: 17.5}
       tessellationDetail: 0
       bones: []
       spriteID: 7ddc4f1e61e98da4f8349ef347d28c39
@@ -779,7 +790,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -13.5, y: 7}
+        - {x: -13.5, y: 1}
+        - {x: -0.5, y: -16}
+        - {x: 4.5, y: -16}
+        - {x: 13.5, y: 2}
+        - {x: 13.5, y: 7}
       tessellationDetail: 0
       bones: []
       spriteID: 0edd932a3e2047546b90d879dd792721
@@ -1069,13 +1086,13 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -27.5, y: 17.5}
+      - - {x: -27.5, y: 13.5}
         - {x: -27.5, y: -16.5}
         - {x: -17.5, y: -23.5}
         - {x: -12.5, y: -24.5}
         - {x: 26.5, y: -24.5}
         - {x: 27.5, y: -19.5}
-        - {x: 27.5, y: 17.5}
+        - {x: 27.5, y: 13.5}
       - - {x: -11.5, y: 1.5}
         - {x: -9.5, y: 3.5}
         - {x: -10.5, y: 1.5}
