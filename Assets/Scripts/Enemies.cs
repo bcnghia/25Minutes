@@ -71,7 +71,7 @@ public class Enemys : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.tag == "Player") || (collision.tag == "PlayerWeapon"))
+        if ((collision.tag == "Player") || (collision.tag == "Weapon"))
         {
             //Debug.Log(playerAttack.GetDamage());
             TakeDamage(10); 
