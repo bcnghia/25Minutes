@@ -6,8 +6,8 @@ public class Enemys : MonoBehaviour
 {
     GameObject scoreUIText;
 
-    public int maxHealth;
-    public int currentHealth;
+    public float maxHealth;
+    public float currentHealth;
 
     public int enemyScore;
     public float movingSpeed; 
@@ -29,7 +29,7 @@ public class Enemys : MonoBehaviour
 
     }
 
-    void TakeDamage(int dmg)
+    void TakeDamage(float dmg)
     {
         currentHealth -= dmg;
     }
@@ -73,7 +73,8 @@ public class Enemys : MonoBehaviour
     {
         if ((collision.tag == "Player") || (collision.tag == "PlayerWeapon"))
         {
-            TakeDamage(20); 
+            //Debug.Log(playerAttack.GetDamage());
+            TakeDamage(10); 
             if (currentHealth <= 0)
             {
                 PlayExplosion();
