@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour
+public class Weapon : MonoBehaviour
 {
     [SerializeField] private Animator animator;
 
@@ -12,7 +12,7 @@ public class PlayerAttack : MonoBehaviour
 
     float timeUntilAttack; // đang k dùng
 
-    [SerializeField] float sizeSword; 
+    [SerializeField] float sizeWeapon; 
     // ý tưởng là bắt đầu game cho cây kiếm nhỏ, damage nhỏ
     // nâng cấp kiếm thì nâng size kiếm, damage kiếm => auto mạnh
 
@@ -56,10 +56,10 @@ public class PlayerAttack : MonoBehaviour
 
         if(transform.eulerAngles.z > 90 && transform.eulerAngles.z < 270)
         {
-            transform.localScale = new Vector3(sizeSword, -sizeSword, 0);
+            transform.localScale = new Vector3(sizeWeapon, -sizeWeapon, 0);
         } else
         {
-            transform.localScale = new Vector3(sizeSword, sizeSword, 0);
+            transform.localScale = new Vector3(sizeWeapon, sizeWeapon, 0);
         }
     }
 }

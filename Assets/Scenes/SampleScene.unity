@@ -1024,7 +1024,7 @@ MonoBehaviour:
   animator: {fileID: 173737681}
   attackSpeed: 0.5
   damage: 1
-  sizeSword: 0.4
+  sizeWeapon: 0.4
 --- !u!1 &412561032
 GameObject:
   m_ObjectHideFlags: 0
