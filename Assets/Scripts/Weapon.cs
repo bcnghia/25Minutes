@@ -12,9 +12,14 @@ public class Weapon : MonoBehaviour
 
     float timeUntilAttack; // đang k dùng
 
-    [SerializeField] float sizeWeapon; 
+    [SerializeField] float sizeWeapon;
     // ý tưởng là bắt đầu game cho cây kiếm nhỏ, damage nhỏ
     // nâng cấp kiếm thì nâng size kiếm, damage kiếm => auto mạnh
+
+    private void Start()
+    {
+        transform.localScale = new Vector3(sizeWeapon, sizeWeapon, sizeWeapon);
+    }
 
     private void Update()
     {
