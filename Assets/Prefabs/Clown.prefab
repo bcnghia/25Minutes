@@ -9,14 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2333076148187998124}
+  - component: {fileID: 160881719366388224}
   - component: {fileID: 6627803284593046362}
   - component: {fileID: 7318455760788142180}
   - component: {fileID: -1341261573364508850}
   - component: {fileID: 1450245662614828368}
-  - component: {fileID: 160881719366388224}
   m_Layer: 0
   m_Name: Clown
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,6 +36,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &160881719366388224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109081761211127853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6dd26ac5ea9fe428598c8a2bcdd7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 80
+  currentHealth: 0
+  enemyScore: 0
+  movingSpeed: 5
+  deathAnimation: {fileID: 8044361183931621804, guid: 8e3c47ae6aa0bac41a6658e1bda87f43, type: 3}
+  chasingPlayer: 1
 --- !u!212 &6627803284593046362
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -186,21 +204,3 @@ PolygonCollider2D:
       - {x: 0.085, y: -0.17}
       - {x: 0.085, y: 0.17}
   m_UseDelaunayMesh: 0
---- !u!114 &160881719366388224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109081761211127853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a6dd26ac5ea9fe428598c8a2bcdd7f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 80
-  currentHealth: 0
-  enemyScore: 0
-  movingSpeed: 5
-  deathAnimation: {fileID: 8044361183931621804, guid: 8e3c47ae6aa0bac41a6658e1bda87f43, type: 3}
-  chasingPlayer: 1

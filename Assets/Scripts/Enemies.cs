@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemys : MonoBehaviour
+public class Enemies : MonoBehaviour
 {
     GameObject scoreUIText;
 
