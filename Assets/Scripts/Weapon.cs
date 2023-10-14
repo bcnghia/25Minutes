@@ -59,12 +59,12 @@ public class Weapon : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(0, 0, angle);
         transform.rotation = rotation;
 
-        if(transform.eulerAngles.z > 90 && transform.eulerAngles.z < 270)
-        {
-            transform.localScale = new Vector3(sizeWeapon, -sizeWeapon, 0);
-        } else
-        {
-            transform.localScale = new Vector3(sizeWeapon, sizeWeapon, 0);
-        }
+        //if(transform.eulerAngles.z > 90 && transform.eulerAngles.z < 270)
+        //{
+        //    transform.localScale = new Vector3(sizeWeapon, -sizeWeapon, 0);
+        //} else
+        //{
+        //    transform.localScale = new Vector3(sizeWeapon, sizeWeapon, 0);
+        //}
     }
 }
