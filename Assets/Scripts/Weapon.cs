@@ -6,9 +6,7 @@ public class Weapon : MonoBehaviour
 {
     [SerializeField] private Animator animator;
 
-    [SerializeField] private float attackSpeed; // đang k dùng
-
-    [SerializeField] private float damage;
+    //[SerializeField] private float damage;
 
     float timeUntilAttack; // đang k dùng
 
@@ -25,8 +23,6 @@ public class Weapon : MonoBehaviour
     {
         RotateSword();
 
-        
-
         //if (timeUntilAttack <= 0)
         //{
         //    if (Input.GetMouseButton(0))
@@ -38,16 +34,6 @@ public class Weapon : MonoBehaviour
         //{
         //    timeUntilAttack -= Time.deltaTime;
         //}
-    }
-
-    public float GetDamage()
-    {
-        return damage;
-    }
-
-    private void SetDamage(float value)
-    {
-        damage = value;
     }
 
     void RotateSword()
@@ -67,4 +53,14 @@ public class Weapon : MonoBehaviour
         //    transform.localScale = new Vector3(sizeWeapon, sizeWeapon, 0);
         //}
     }
+
+    //void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.tag == "Enemy")
+    //    {
+    //        //Debug.Log(playerAttack.GetDamage());
+    //        collision.GetComponent<Enemies>().TakeDamage(damage);
+    //        Debug.Log("Weapon chem: " + damage);
+    //    }
+    //}
 }
