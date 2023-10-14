@@ -869,37 +869,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &18659995
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 18659996}
-  m_Layer: 0
-  m_Name: Scythe_Object
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &18659996
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18659995}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1279248200}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &32364471
 GameObject:
   m_ObjectHideFlags: 0
@@ -6441,7 +6410,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 32364472}
-  - {fileID: 18659996}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1279248201
@@ -6871,10 +6839,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy01Spawner: {fileID: 1434025145}
-  enemy02Spawner: {fileID: 0}
-  enemy03Spawner: {fileID: 0}
-  enemy04Spawner: {fileID: 0}
-  enemy05Spawner: {fileID: 0}
+  enemy02Spawner: {fileID: 898228452}
+  enemy03Spawner: {fileID: 35258425}
+  enemy04Spawner: {fileID: 183252937}
+  enemy05Spawner: {fileID: 828563162}
 --- !u!1 &1531866210
 GameObject:
   m_ObjectHideFlags: 0
