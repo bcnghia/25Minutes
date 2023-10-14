@@ -8,10 +8,9 @@ public class GameManager : MonoBehaviour
     //public GameObject playerShip;
 
     public GameObject enemy01Spawner;
-    public GameObject enemy02Spawner;
-    public GameObject enemy03Spawner;
-    public GameObject enemy04Spawner;
-    public GameObject enemy05Spawner;
+    //public GameObject enemy02Spawner;
+    //public GameObject enemy03Spawner;
+    //public GameObject enemy04Spawner;
 
     //public GameObject GameOver;
     //public GameObject scoreUIText;
@@ -27,10 +26,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         enemy01Spawner.GetComponent<EnemySpawner>().ScheduleEnemySpawner();
-        enemy02Spawner.GetComponent<EnemySpawner>().ScheduleEnemySpawner();
-        enemy03Spawner.GetComponent<EnemySpawner>().ScheduleEnemySpawner();
-        enemy04Spawner.GetComponent<EnemySpawner>().ScheduleEnemySpawner();
-        enemy05Spawner.GetComponent<EnemySpawner>().ScheduleEnemySpawner();
     }
 
     //void UpdateGameManagerState()
