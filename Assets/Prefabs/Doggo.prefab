@@ -51,7 +51,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 0
   enemyScore: 500
-  movingSpeed: 1
+  movingSpeed: 4
   deathAnimation: {fileID: 1905551391008287442, guid: 8e443c27ac5adc041b34b323cb5415a0, type: 3}
   chasingPlayer: 1
 --- !u!212 &1803090401128994891

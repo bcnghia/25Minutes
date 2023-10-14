@@ -26,17 +26,46 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        // dưới - trái điểm trên màn hình
         Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
-
-        // trên - phải 
         Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
 
         GameObject anEnemy = (GameObject)Instantiate(enemies);
-        anEnemy.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
 
+        Vector3 spawnPosition = Vector3.zero;
+        float randomSide = Random.Range(0, 8);
+
+        switch (randomSide)
+        {
+            case 0: // Bên trên
+                spawnPosition = new Vector2(Random.Range(min.x, max.x), max.y);
+                break;
+            case 1: // Bên dưới
+                spawnPosition = new Vector2(Random.Range(min.x, max.x), min.y);
+                break;
+            case 2: // Bên trái
+                spawnPosition = new Vector2(min.x, Random.Range(min.y, max.y));
+                break;
+            case 3: // Bên phải
+                spawnPosition = new Vector2(max.x, Random.Range(min.y, max.y));
+                break;
+            case 4: // Điểm góc trên bên trái
+                spawnPosition = new Vector2(min.x, max.y);
+                break;
+            case 5: // Điểm góc trên bên phải
+                spawnPosition = new Vector2(max.x, max.y);
+                break;
+            case 6: // Điểm góc dưới bên trái
+                spawnPosition = new Vector2(min.x, min.y);
+                break;
+            case 7: // Điểm góc dưới bên phải
+                spawnPosition = new Vector2(max.x, min.y);
+                break;
+        }
+
+        anEnemy.transform.position = spawnPosition;
         ScheduleNextEnemySpawn();
     }
+
 
     void ScheduleNextEnemySpawn()
     {
