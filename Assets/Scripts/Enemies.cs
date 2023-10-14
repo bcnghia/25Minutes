@@ -6,11 +6,12 @@ public class Enemies : MonoBehaviour
 {
     GameObject scoreUIText;
 
-    public float maxHealth;
-    public float currentHealth;
+    //public float maxHealth;
+    //public float currentHealth;
+    [SerializeField] private float health;
 
     public int enemyScore;
-    public float movingSpeed; 
+    public float moveSpeed; 
     public GameObject deathAnimation;
 
     [SerializeField]
@@ -21,7 +22,7 @@ public class Enemies : MonoBehaviour
 
     void Start()
     {
-        currentHealth = maxHealth;
+        //currentHealth = maxHealth;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         //scoreUIText = GameObject.FindGameObjectWithTag("ScoreText");
 
@@ -29,9 +30,16 @@ public class Enemies : MonoBehaviour
 
     }
 
-    void TakeDamage(float dmg)
+    public void TakeDamage(float damage)
     {
-        currentHealth -= dmg;
+        //currentHealth -= damage;
+        health -= damage;
+
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+            Debug.Log("Enemy die: " + damage);
+        }
     }
 
     void Update()
@@ -71,11 +79,12 @@ public class Enemies : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.tag == "Player") || (collision.tag == "Weapon"))
+        //if ((collision.tag == "Player") || (collision.tag == "Weapon"))
+        if ((collision.tag == "Player"))
         {
             //Debug.Log(playerAttack.GetDamage());
-            TakeDamage(10); 
-            if (currentHealth <= 0)
+            TakeDamage(5);
+            if (health <= 0)
             {
                 PlayExplosion();
                 Destroy(gameObject);
@@ -102,7 +111,7 @@ public class Enemies : MonoBehaviour
         // Thực hiện các hành động liên quan đến việc theo đuổi người chơi ở đây
         // Ví dụ: Di chuyển theo hướng tới vị trí của người chơi
         Vector3 direction = (player.position - transform.position).normalized;
-        transform.Translate(direction * movingSpeed * Time.deltaTime);
+        transform.Translate(direction * moveSpeed * Time.deltaTime);
     }
 
 
@@ -110,7 +119,7 @@ public class Enemies : MonoBehaviour
     void MoveNormally()
     {
         Vector2 position = transform.position;
-        position = new Vector2(position.x, position.y - movingSpeed * Time.deltaTime);
+        position = new Vector2(position.x, position.y - moveSpeed * Time.deltaTime);
         transform.position = position;
     }
 }
