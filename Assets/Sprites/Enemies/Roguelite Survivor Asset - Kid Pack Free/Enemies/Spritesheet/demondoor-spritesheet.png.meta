@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ea5a9425729481f4dbb12eb2e2a9caab
+guid: bfd67083f80469c4c8915aa4ccdd1a6e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -94,19 +94,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -123,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walk_0
+      name: demondoor-spritesheet_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 0
-        width: 40
-        height: 27
+        x: 12
+        y: 10
+        width: 37
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 329ba431ef5ab254b881549cdb3fc016
-      internalID: -392354517
+      spriteID: 1990b842543b24f4db6229dc5293ab6d
+      internalID: 1954251748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_1
+      name: demondoor-spritesheet_1
       rect:
         serializedVersion: 2
-        x: 53
-        y: 0
-        width: 38
-        height: 28
+        x: 76
+        y: 11
+        width: 37
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 596c09964291a5e4ba1f2170a3438be1
-      internalID: -1750198808
+      spriteID: 8230ca082ec7b9e4eba04a80d07d7cc9
+      internalID: -1781352287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_2
+      name: demondoor-spritesheet_2
       rect:
         serializedVersion: 2
-        x: 103
-        y: 1
-        width: 36
-        height: 28
+        x: 140
+        y: 12
+        width: 37
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00c3aaebb72078449b47e9ee6fc3c40c
-      internalID: 1035744696
+      spriteID: 7b770bf087fb8664abe614cf7ed31054
+      internalID: -313961426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_3
+      name: demondoor-spritesheet_3
       rect:
         serializedVersion: 2
-        x: 152
-        y: 0
-        width: 35
-        height: 29
+        x: 204
+        y: 11
+        width: 37
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,50 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0504e3f9429091549bfbcf1aa895e379
-      internalID: -1945531533
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk_4
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 43
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14e7be0577954c2479952b1abfd6dcd3
-      internalID: -1453706022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk_5
-      rect:
-        serializedVersion: 2
-        x: 241
-        y: 0
-        width: 42
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 079e020af9b5e96418f1c5bf384c1231
-      internalID: -2004351623
+      spriteID: 481ab6326c5a15f4a8d4ce7d0d3ea223
+      internalID: 444900240
       vertices: []
       indices: 
       edges: []
@@ -259,12 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Walk_0: -392354517
-      Walk_1: -1750198808
-      Walk_2: 1035744696
-      Walk_3: -1945531533
-      Walk_4: -1453706022
-      Walk_5: -2004351623
+      demondoor-spritesheet_0: 1954251748
+      demondoor-spritesheet_1: -1781352287
+      demondoor-spritesheet_2: -313961426
+      demondoor-spritesheet_3: 444900240
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

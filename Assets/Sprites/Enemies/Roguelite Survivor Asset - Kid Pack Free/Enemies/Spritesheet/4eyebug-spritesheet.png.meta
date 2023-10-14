@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ea5a9425729481f4dbb12eb2e2a9caab
+guid: f646b5cdbd48994449678597c61fdf9c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -94,19 +94,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -123,32 +110,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walk_0
+      name: 4eyebug-spritesheet_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 0
-        width: 40
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 329ba431ef5ab254b881549cdb3fc016
-      internalID: -392354517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk_1
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 0
+        x: 15
+        y: 19
         width: 38
         height: 28
       alignment: 0
@@ -158,19 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 596c09964291a5e4ba1f2170a3438be1
-      internalID: -1750198808
+      spriteID: e52a9af89bc6c1843a309dd07ae3f2ab
+      internalID: 933050039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_2
+      name: 4eyebug-spritesheet_1
       rect:
         serializedVersion: 2
-        x: 103
-        y: 1
-        width: 36
+        x: 80
+        y: 18
+        width: 34
         height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -179,40 +145,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00c3aaebb72078449b47e9ee6fc3c40c
-      internalID: 1035744696
+      spriteID: 74cff9a455ab50c4a9e41bcf08743bb0
+      internalID: -942562564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_3
+      name: 4eyebug-spritesheet_2
       rect:
         serializedVersion: 2
-        x: 152
-        y: 0
-        width: 35
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0504e3f9429091549bfbcf1aa895e379
-      internalID: -1945531533
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Walk_4
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 43
+        x: 145
+        y: 19
+        width: 31
         height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -221,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14e7be0577954c2479952b1abfd6dcd3
-      internalID: -1453706022
+      spriteID: 5718af0ed0d238442ba1bc006a73ca33
+      internalID: 2077759808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_5
+      name: 4eyebug-spritesheet_3
       rect:
         serializedVersion: 2
-        x: 241
-        y: 0
-        width: 42
-        height: 27
+        x: 209
+        y: 18
+        width: 31
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 079e020af9b5e96418f1c5bf384c1231
-      internalID: -2004351623
+      spriteID: 89a23c81d2831ca418975ed7d4b3462b
+      internalID: 1369011997
       vertices: []
       indices: 
       edges: []
@@ -259,12 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Walk_0: -392354517
-      Walk_1: -1750198808
-      Walk_2: 1035744696
-      Walk_3: -1945531533
-      Walk_4: -1453706022
-      Walk_5: -2004351623
+      4eyebug-spritesheet_0: 933050039
+      4eyebug-spritesheet_1: -942562564
+      4eyebug-spritesheet_2: 2077759808
+      4eyebug-spritesheet_3: 1369011997
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
