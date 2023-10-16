@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
-  enemyScore: 5
-  moveSpeed: 2
+  enemyScore: 10
+  moveSpeed: 3
   deathAnimation: {fileID: 1905551391008287442, guid: 8e443c27ac5adc041b34b323cb5415a0, type: 3}
   chasingPlayer: 1
 --- !u!212 &1803090401128994891

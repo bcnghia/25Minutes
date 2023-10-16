@@ -11,7 +11,7 @@ public class Enemies : MonoBehaviour
     [SerializeField] private float health;
 
     public int enemyScore;
-    public float moveSpeed; 
+    public float moveSpeed;
     public GameObject deathAnimation;
 
     [SerializeField]
@@ -26,7 +26,7 @@ public class Enemies : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         //scoreUIText = GameObject.FindGameObjectWithTag("ScoreText");
 
-        spriteRenderer = GetComponent <SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
     }
 
@@ -35,7 +35,7 @@ public class Enemies : MonoBehaviour
         //currentHealth -= damage;
         health -= damage;
 
-        if(health <= 0)
+        if (health <= 0)
         {
             Destroy(gameObject);
             Debug.Log("Enemy die: " + damage);

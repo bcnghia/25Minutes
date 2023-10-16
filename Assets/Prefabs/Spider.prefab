@@ -48,9 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6dd26ac5ea9fe428598c8a2bcdd7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
-  enemyScore: 30
-  moveSpeed: 3
+  health: 80
+  enemyScore: 80
+  moveSpeed: 2
   deathAnimation: {fileID: 8044361183931621804, guid: a4555f0346b75274381cd2440e9586aa, type: 3}
   chasingPlayer: 1
 --- !u!212 &9035281398159183818

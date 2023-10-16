@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8552534525317096647}
+  - component: {fileID: -6708182003760247386}
   - component: {fileID: 8298337762343837943}
   - component: {fileID: 383928516859141250}
-  - component: {fileID: -6708182003760247386}
   m_Layer: 0
   m_Name: Doggo_Death
   m_TagString: Enemy
@@ -34,6 +34,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-6708182003760247386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905551391008287442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 228ca144e1d32354a8cd3598c14bb4f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &8298337762343837943
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -107,15 +119,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-6708182003760247386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1905551391008287442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 228ca144e1d32354a8cd3598c14bb4f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
