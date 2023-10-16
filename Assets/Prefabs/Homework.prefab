@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1279645008183695013}
+  - component: {fileID: -5954542827933918424}
   - component: {fileID: 8387596418204382592}
   - component: {fileID: 4763044175011597481}
   - component: {fileID: -7017924461508776054}
   - component: {fileID: 7701117405048331914}
-  - component: {fileID: -5954542827933918424}
   m_Layer: 0
   m_Name: Homework
   m_TagString: Enemy
@@ -36,6 +36,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-5954542827933918424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4907482584834410532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a6dd26ac5ea9fe428598c8a2bcdd7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  enemyScore: 50
+  moveSpeed: 3
+  deathAnimation: {fileID: 8044361183931621804, guid: 8e3c47ae6aa0bac41a6658e1bda87f43, type: 3}
+  chasingPlayer: 1
 --- !u!212 &8387596418204382592
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -207,21 +224,3 @@ PolygonCollider2D:
       - {x: 0.195, y: 0.049999997}
       - {x: 0.11644241, y: 0.07702275}
   m_UseDelaunayMesh: 0
---- !u!114 &-5954542827933918424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4907482584834410532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a6dd26ac5ea9fe428598c8a2bcdd7f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 200
-  currentHealth: 0
-  enemyScore: 0
-  movingSpeed: 5.5
-  deathAnimation: {fileID: 8044361183931621804, guid: 8e3c47ae6aa0bac41a6658e1bda87f43, type: 3}
-  chasingPlayer: 1
