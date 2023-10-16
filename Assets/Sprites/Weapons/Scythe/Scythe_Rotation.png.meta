@@ -1,0 +1,668 @@
+fileFormatVersion: 2
+guid: 05562ceb8befb61499ef131e5b3b35e1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Scythe_Rotation_0
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1918
+        width: 733
+        height: 757
+      alignment: 9
+      pivot: {x: 0.9662389, y: 0.06445409}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a1148eabda7154ba58f76da1a6fbbf
+      internalID: 1277106257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_1
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 1783
+        width: 663
+        height: 964
+      alignment: 9
+      pivot: {x: 0.31552452, y: 0.051853925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e8669478ba5cce4480e40b202b0aeb9
+      internalID: -1713795349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_2
+      rect:
+        serializedVersion: 2
+        x: 1908
+        y: 1924
+        width: 758
+        height: 733
+      alignment: 9
+      pivot: {x: 0.080080055, y: 0.031837035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd10e41170fc9c4599bcd47952af29c
+      internalID: -1184975493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_3
+      rect:
+        serializedVersion: 2
+        x: 2859
+        y: 1864
+        width: 964
+        height: 665
+      alignment: 9
+      pivot: {x: 0.048037454, y: 0.682503}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb2bef10237f7d46a07db1eb0d3b4df
+      internalID: -375135473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_4
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 644
+        width: 733
+        height: 756
+      alignment: 9
+      pivot: {x: 0.03378309, y: 0.93646014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb75b769dbee214eb15eaa3f404567c
+      internalID: -537766284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_5
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 594
+        width: 664
+        height: 964
+      alignment: 9
+      pivot: {x: 0.6868698, y: 0.9472019}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63e5555d2f638144b8181486fb90413
+      internalID: -1723489696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_6
+      rect:
+        serializedVersion: 2
+        x: 1949
+        y: 661
+        width: 757
+        height: 734
+      alignment: 9
+      pivot: {x: 0.93534017, y: 0.96514094}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff7728a1e703284b8a6391d067efffa
+      internalID: 209402907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_7
+      rect:
+        serializedVersion: 2
+        x: 2853
+        y: 813
+        width: 964
+        height: 663
+      alignment: 9
+      pivot: {x: 0.94753736, y: 0.3155372}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7d7ae59f47ae5499a509d7d2672218
+      internalID: 134289223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_8
+      rect:
+        serializedVersion: 2
+        x: 3466
+        y: 17
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62e883ed335d68d44affec2b5aecbab1
+      internalID: -207840676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_9
+      rect:
+        serializedVersion: 2
+        x: 3501
+        y: 16
+        width: 37
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c8c23f456385d4dbd010dfaf7de5a8
+      internalID: 931915429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_10
+      rect:
+        serializedVersion: 2
+        x: 3545
+        y: 60
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a7ac7258d77aa45b9de8c7c946514b
+      internalID: -2036439110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_11
+      rect:
+        serializedVersion: 2
+        x: 3559
+        y: 16
+        width: 23
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c98eec03f9f7741b1ad1d45c0e7002
+      internalID: -1023574851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_12
+      rect:
+        serializedVersion: 2
+        x: 3602
+        y: 17
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d79797ed36300c4ab428cc803362539
+      internalID: 1126494189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_13
+      rect:
+        serializedVersion: 2
+        x: 3693
+        y: 16
+        width: 33
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e317f26adfec2c54e9172cb9ee03bae0
+      internalID: -1150947229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_14
+      rect:
+        serializedVersion: 2
+        x: 3753
+        y: 16
+        width: 41
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df931ca52be0ec42b1f71e809793b45
+      internalID: 2138214455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_15
+      rect:
+        serializedVersion: 2
+        x: 3881
+        y: 17
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12a5446d5f787aa499b299c2dee8e314
+      internalID: -1486408832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_16
+      rect:
+        serializedVersion: 2
+        x: 3922
+        y: 60
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f02f8c017154d214da4a21de4a5b24b6
+      internalID: 1808402161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_17
+      rect:
+        serializedVersion: 2
+        x: 3545
+        y: 17
+        width: 10
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70489eb457d738c479d76f0bd88da5f7
+      internalID: 1358659904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_18
+      rect:
+        serializedVersion: 2
+        x: 3638
+        y: 0
+        width: 37
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13bbd8b00833f2a44a405d337a831f3f
+      internalID: -1205304450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_19
+      rect:
+        serializedVersion: 2
+        x: 3728
+        y: 35
+        width: 21
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5232fd90560a83247b6fe12bcf380313
+      internalID: -723756837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_20
+      rect:
+        serializedVersion: 2
+        x: 3797
+        y: 17
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5899c56e37e1e2e4781ae5268cc2a48c
+      internalID: -214871071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_21
+      rect:
+        serializedVersion: 2
+        x: 3836
+        y: 2
+        width: 37
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5547cc87b31ca2408281a7f851f06a7
+      internalID: 1498462785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_22
+      rect:
+        serializedVersion: 2
+        x: 3922
+        y: 17
+        width: 9
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ecb2c14f4e1b8c4f928c9ffa1dfc7e7
+      internalID: -1225558758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scythe_Rotation_23
+      rect:
+        serializedVersion: 2
+        x: 3935
+        y: 16
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6b8b5c0fc04b741b12fdc0cfe05d7c
+      internalID: -1862244726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Scythe_Rotation_0: 1277106257
+      Scythe_Rotation_1: -1713795349
+      Scythe_Rotation_10: -2036439110
+      Scythe_Rotation_11: -1023574851
+      Scythe_Rotation_12: 1126494189
+      Scythe_Rotation_13: -1150947229
+      Scythe_Rotation_14: 2138214455
+      Scythe_Rotation_15: -1486408832
+      Scythe_Rotation_16: 1808402161
+      Scythe_Rotation_17: 1358659904
+      Scythe_Rotation_18: -1205304450
+      Scythe_Rotation_19: -723756837
+      Scythe_Rotation_2: -1184975493
+      Scythe_Rotation_20: -214871071
+      Scythe_Rotation_21: 1498462785
+      Scythe_Rotation_22: -1225558758
+      Scythe_Rotation_23: -1862244726
+      Scythe_Rotation_3: -375135473
+      Scythe_Rotation_4: -537766284
+      Scythe_Rotation_5: -1723489696
+      Scythe_Rotation_6: 209402907
+      Scythe_Rotation_7: 134289223
+      Scythe_Rotation_8: -207840676
+      Scythe_Rotation_9: 931915429
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
