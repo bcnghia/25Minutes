@@ -22,9 +22,8 @@ public class WeaponCollider : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            //Debug.Log(playerAttack.GetDamage());
             collision.GetComponent<Enemies>().TakeDamage(damage);
-            Debug.Log("Weapon chem: " + damage);
+            //Debug.Log("Weapon chem: " + damage);
         }
     }
 }
