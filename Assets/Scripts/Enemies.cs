@@ -37,6 +37,8 @@ public class Enemies : MonoBehaviour
 
         if (health <= 0)
         {
+            // Gọi ra từ hàm LootBag để quái rớt đồ
+            GetComponent<LootBag>().InstantiateLoot(transform.position);
             Destroy(gameObject);
             Debug.Log("Enemy die: " + damage);
         }

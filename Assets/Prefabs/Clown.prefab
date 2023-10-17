@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7318455760788142180}
   - component: {fileID: -1341261573364508850}
   - component: {fileID: 1450245662614828368}
+  - component: {fileID: -7390935586531003687}
   m_Layer: 0
   m_Name: Clown
   m_TagString: Enemy
@@ -203,3 +204,26 @@ PolygonCollider2D:
       - {x: 0.085, y: -0.17}
       - {x: 0.085, y: 0.17}
   m_UseDelaunayMesh: 0
+--- !u!114 &-7390935586531003687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109081761211127853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f90ed9653d35ea24dabe17dad75e4f67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropItemPrefab: {fileID: 3004039809812288249, guid: 826546600905d9745a7e8818ff4306ac, type: 3}
+  lootList:
+  - {fileID: 11400000, guid: 3e7fb3f656f754d4e9b1b69563757f69, type: 2}
+  - {fileID: 11400000, guid: 8333d68adf086c447b63686abf69509a, type: 2}
+  - {fileID: 11400000, guid: 85f83e5dbe631db47830d9b0a349d797, type: 2}
+  - {fileID: 11400000, guid: 5ab07f5dcae3cc643b49a6c764a9e1fb, type: 2}
+  - {fileID: 11400000, guid: b1a921d3e53b8c64d954ea247f763851, type: 2}
+  - {fileID: 11400000, guid: 2dbbdad6f92256649b7dd8d0b7ee6c4c, type: 2}
+  - {fileID: 11400000, guid: a8cb051621c6b0445aa035f5ed9b5ed6, type: 2}
+  - {fileID: 11400000, guid: 9be8545638a3925439beb227aeab4f5a, type: 2}
+  - {fileID: 11400000, guid: 1e8e68011af5db04eac333b048f68c10, type: 2}
