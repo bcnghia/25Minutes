@@ -8,59 +8,69 @@ public class Weapon : MonoBehaviour
 
     //[SerializeField] private float damage;
 
-    float timeUntilAttack; // đang k dùng
+    [SerializeField] private float attackSpeed = 1.5f; // Tốc độ đánh
+    public float currentAttackSpeed;
+    // lấy tốc độ đánh HIỆN TẠI, đề phòng người dùng được buff tốc độ đánh
 
     [SerializeField] float sizeWeapon;
     // ý tưởng là bắt đầu game cho cây kiếm nhỏ, damage nhỏ
     // nâng cấp kiếm thì nâng size kiếm, damage kiếm => auto mạnh
 
+    bool isAttacking = false;
+
     private void Start()
     {
+        currentAttackSpeed = attackSpeed;
         transform.localScale = new Vector3(sizeWeapon, sizeWeapon, sizeWeapon);
+        animator = GetComponent<Animator>();
+        StartCoroutine(AttackLoop(currentAttackSpeed));
     }
 
     private void Update()
     {
         RotateSword();
-
-        //if (timeUntilAttack <= 0)
-        //{
-        //    if (Input.GetMouseButton(0))
-        //    {
-        //        animator.SetTrigger("Attack");
-        //        timeUntilAttack = attackSpeed;
-        //    }
-        //} else
-        //{
-        //    timeUntilAttack -= Time.deltaTime;
-        //}
+        if (currentAttackSpeed != attackSpeed)
+        {
+            currentAttackSpeed = attackSpeed;
+        }
     }
 
     void RotateSword()
     {
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 lookDir = mousePos - transform.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+        if (!isAttacking) // Chỉ xoay khi kiếm không tấn công
+        {
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 lookDir = mousePos - transform.position;
+            float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
 
-        Quaternion rotation = Quaternion.Euler(0, 0, angle);
-        transform.rotation = rotation;
+            Quaternion rotation = Quaternion.Euler(0, 0, angle);
+            transform.rotation = rotation;
 
-        //if(transform.eulerAngles.z > 90 && transform.eulerAngles.z < 270)
-        //{
-        //    transform.localScale = new Vector3(sizeWeapon, -sizeWeapon, 0);
-        //} else
-        //{
-        //    transform.localScale = new Vector3(sizeWeapon, sizeWeapon, 0);
-        //}
+            //if(transform.eulerAngles.z > 90 && transform.eulerAngles.z < 270)
+            //{
+            //    transform.localScale = new Vector3(sizeWeapon, -sizeWeapon, 0);
+            //} else
+            //{
+            //    transform.localScale = new Vector3(sizeWeapon, sizeWeapon, 0);
+            //}
+        }
     }
+    IEnumerator AttackLoop(float delay)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(delay);
 
-    //void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (collision.tag == "Enemy")
-    //    {
-    //        //Debug.Log(playerAttack.GetDamage());
-    //        collision.GetComponent<Enemies>().TakeDamage(damage);
-    //        Debug.Log("Weapon chem: " + damage);
-    //    }
-    //}
+            animator.SetBool("Attack", true);
+            isAttacking = true;
+
+            yield return new WaitForSeconds(0.5f);
+            // Đoạn return này dùng để tránh setbool liên tục làm kiếm không đánh ra
+
+            animator.SetBool("Attack", false);
+            isAttacking = false;
+
+            delay = currentAttackSpeed; // cập nhật lại tốc độ đáhn cho weapon
+        }
+    }
 }

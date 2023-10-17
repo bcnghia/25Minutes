@@ -1595,6 +1595,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 173737681}
+  attackSpeed: 5
+  currentAttackSpeed: 0
   sizeWeapon: 0.4
 --- !u!1001 &178185242
 PrefabInstance:
@@ -10197,7 +10199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ab2e155de2a9c46aeea55f9d487a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 1335733308}
+  attackSpeed: 5
+  currentAttackSpeed: 0
   sizeWeapon: 0.1
 --- !u!4 &1340835816 stripped
 Transform:
@@ -12462,7 +12466,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e1e55a31515c9dd449f1dbc47d68631c, type: 2}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
