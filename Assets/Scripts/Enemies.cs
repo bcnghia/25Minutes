@@ -20,9 +20,11 @@ public class Enemies : MonoBehaviour
 
     private Transform player;
 
+    [SerializeField] private int enemyDamage = 10; // Damage của quái
+
+
     void Start()
     {
-        //currentHealth = maxHealth;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         //scoreUIText = GameObject.FindGameObjectWithTag("ScoreText");
 
@@ -32,7 +34,6 @@ public class Enemies : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        //currentHealth -= damage;
         health -= damage;
 
         if (health <= 0)
@@ -81,19 +82,36 @@ public class Enemies : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        //if ((collision.tag == "Player") || (collision.tag == "Weapon"))
-        if ((collision.tag == "Player"))
+        if (collision.tag == "Player")
         {
-            //Debug.Log(playerAttack.GetDamage());
-            TakeDamage(5);
             if (health <= 0)
             {
                 PlayExplosion();
                 Destroy(gameObject);
-                //scoreUIText.GetComponent<GameScore>().Score += enemyScore;
+            }
+
+            // Gây sát thương cho người chơi
+            Player player = collision.GetComponent<Player>();
+            if (player != null)
+            {
+                player.TakeDamage(enemyDamage);
             }
         }
     }
+
+
+    private bool beingAttacked = false;
+
+    public void SetBeingAttacked(bool attacked)
+    {
+        beingAttacked = attacked;
+    }
+
+    public bool IsBeingAttacked()
+    {
+        return beingAttacked;
+    }
+
 
     void PlayExplosion()
     {

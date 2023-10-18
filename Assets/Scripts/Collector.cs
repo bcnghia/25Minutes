@@ -11,7 +11,7 @@ public class Collector : MonoBehaviour
             PickUp lootItem = other.GetComponent<PickUp>();
             if (lootItem != null)
             {
-                lootItem.CollectLoot();
+                lootItem.CollectLoot(this.GetComponent<Player>());
             }
         }
     }
