@@ -16,6 +16,9 @@ public class Weapon : MonoBehaviour
     // ý tưởng là bắt đầu game cho cây kiếm nhỏ, damage nhỏ
     // nâng cấp kiếm thì nâng size kiếm, damage kiếm => auto mạnh
 
+    [SerializeField] private AudioClip attackAudioClip; // Thêm trường AudioClip
+    private AudioSource audioSource; // Thêm trường AudioSource
+
     bool isAttacking = false;
 
     private void Start()
@@ -23,6 +26,11 @@ public class Weapon : MonoBehaviour
         currentAttackSpeed = attackSpeed;
         transform.localScale = new Vector3(sizeWeapon, sizeWeapon, sizeWeapon);
         animator = GetComponent<Animator>();
+
+        // Gắn Audio Source cho script
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = attackAudioClip;
+
         StartCoroutine(AttackLoop(currentAttackSpeed));
     }
 
@@ -63,6 +71,8 @@ public class Weapon : MonoBehaviour
 
             animator.SetBool("Attack", true);
             isAttacking = true;
+
+            audioSource.Play();
 
             yield return new WaitForSeconds(0.5f);
             // Đoạn return này dùng để tránh setbool liên tục làm kiếm không đánh ra
