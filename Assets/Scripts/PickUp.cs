@@ -20,22 +20,28 @@ public class PickUp : MonoBehaviour
         Loot lootToCollect2 = FindLootByLootName("Cake");
         Loot lootToCollect3 = FindLootByLootName("Hamburger");
 
-        if (lootToCollect != null || lootToCollect2 != null || lootToCollect3 != null)
+        if (lootToCollect != null)
         {
-            if (lootToCollect != null && lootToCollect.lootName == "Chicken" && player != null)
+            if (lootToCollect.lootName == "Chicken" && player != null)
             {
-                // Hồi máu cho người chơi bằng cách gọi phương thức IncreaseHealth
-                player.IncreaseHealth(lootToCollect.healthRestoreAmount);
+                // Hồi máu cho người chơi bằng cách gọi phương thức RestoreHealth
+                player.RestoreHealth(lootToCollect.healthRestoreAmount);
             }
+        }
 
-            if (lootToCollect2 != null && lootToCollect2.lootName == "Cake" && player != null)
+        if (lootToCollect2 != null)
+        {
+            if (lootToCollect2.lootName == "Cake" && player != null)
             {
-                player.IncreaseHealth(lootToCollect2.healthRestoreAmount);
+                player.RestoreHealth(lootToCollect2.healthRestoreAmount);
             }
+        }
 
-            if (lootToCollect3 != null && lootToCollect3.lootName == "Hamburger" && player != null)
+        if (lootToCollect3 != null)
+        {
+            if (lootToCollect3.lootName == "Hamburger" && player != null)
             {
-                player.IncreaseHealth(lootToCollect3.healthRestoreAmount);
+                player.RestoreHealth(lootToCollect3.healthRestoreAmount);
             }
         }
 
@@ -56,7 +62,6 @@ public class PickUp : MonoBehaviour
                 return lootObject;
             }
         }
-
         return null;
     }
 }

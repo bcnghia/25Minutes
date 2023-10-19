@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootSprite: {fileID: 21300000, guid: ea408b5d70d2f56468d752d222d9684f, type: 3}
   lootName: Cake
-  dropChance: 20
+  dropChance: 1
   healthRestoreAmount: 200

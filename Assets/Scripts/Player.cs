@@ -58,16 +58,16 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void IncreaseHealth(int amount)
-    {
-        currentHealth += amount;
+    //public void IncreaseHealth(int amount)
+    //{
+    //    currentHealth += amount;
 
-        if (currentHealth > maxHealth)
-        {
-            currentHealth = maxHealth;
-        }
+    //    if (currentHealth > maxHealth)
+    //    {
+    //        currentHealth = maxHealth;
+    //    }
 
-        healthBar.SetHealth(currentHealth);
-    }
+    //    healthBar.SetHealth(currentHealth);
+    //}
 
 }
