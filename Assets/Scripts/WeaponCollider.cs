@@ -12,7 +12,6 @@ public class WeaponCollider : MonoBehaviour
         if (collision.tag == "Enemy" && !collision.GetComponent<Enemies>().IsBeingAttacked())
         {
             collision.GetComponent<Enemies>().TakeDamage(damage);
-            //Debug.Log("Weapon chem: " + damage);
         }
     }
 }

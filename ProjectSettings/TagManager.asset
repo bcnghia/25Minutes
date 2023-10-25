@@ -9,6 +9,7 @@ TagManager:
   - PlayerWeapon
   - Loot
   - LootItem
+  - Magnet
   layers:
   - Default
   - TransparentFX

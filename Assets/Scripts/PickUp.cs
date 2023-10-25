@@ -12,38 +12,41 @@ public class PickUp : MonoBehaviour
             Debug.Log("Collected Item");
             CollectLoot(other.GetComponent<Player>());
         }
-
     }
     public void CollectLoot(Player player)
     {
-        Loot lootToCollect = FindLootByLootName("Chicken");
-        Loot lootToCollect2 = FindLootByLootName("Cake");
-        Loot lootToCollect3 = FindLootByLootName("Hamburger");
+        //Loot lootToCollect = FindLootByLootName("Chicken");
+        //Loot lootToCollect2 = FindLootByLootName("Cake");
+        //Loot lootToCollect3 = FindLootByLootName("Hamburger");
 
-        if (lootToCollect != null)
-        {
-            if (lootToCollect.lootName == "Chicken" && player != null)
-            {
-                // Hồi máu cho người chơi bằng cách gọi phương thức RestoreHealth
-                player.RestoreHealth(lootToCollect.healthRestoreAmount);
-            }
-        }
+        //if (lootToCollect != null)
+        //{
+        //    if (lootToCollect.lootName == "Chicken" && player != null)
+        //    {
+        //        // Hồi máu cho người chơi bằng cách gọi phương thức RestoreHealth
 
-        if (lootToCollect2 != null)
-        {
-            if (lootToCollect2.lootName == "Cake" && player != null)
-            {
-                player.RestoreHealth(lootToCollect2.healthRestoreAmount);
-            }
-        }
+        //    }
+        //}
 
-        if (lootToCollect3 != null)
-        {
-            if (lootToCollect3.lootName == "Hamburger" && player != null)
-            {
-                player.RestoreHealth(lootToCollect3.healthRestoreAmount);
-            }
-        }
+        //if (lootToCollect2 != null)
+        //{
+        //    if (lootToCollect2.lootName == "Cake" && player != null)
+        //    {
+
+        //    }
+        //}
+
+        //if (lootToCollect3 != null)
+        //{
+        //    if (lootToCollect3.lootName == "Hamburger" && player != null)
+        //    {
+
+        //    }
+        //}
+
+        
+        
+
 
         // Hủy đối tượng khi nhặt vật phẩm
         Destroy(gameObject);

@@ -30,9 +30,6 @@ public class Player : MonoBehaviour
                 collision.GetComponent<Enemies>().TakeDamage(5);
             }
         }
-
-
-
     }
 
     // Thêm phương thức để hồi máu

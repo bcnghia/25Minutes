@@ -7,13 +7,11 @@ public class Loot : ScriptableObject
 {
     public string lootName;
     public int dropChance;
-    public int healthRestoreAmount = 0;
     public GameObject lootPrefab; // Thêm trường kiểu GameObject để lưu prefab
 
-    public Loot(string lootName, int dropChance, int healthRestoreAmount = 0)
+    public Loot(string lootName, int dropChance)
     {
         this.lootName = lootName;
         this.dropChance = dropChance;
-        this.healthRestoreAmount = healthRestoreAmount;
     }
 }
