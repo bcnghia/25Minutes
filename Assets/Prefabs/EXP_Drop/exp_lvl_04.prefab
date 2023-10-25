@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 476364880433123637}
+  - component: {fileID: 5573673695667605615}
+  - component: {fileID: 2482391878509472188}
   - component: {fileID: 292891973080929197}
   - component: {fileID: 8677888453803672083}
   - component: {fileID: 3723144695709333070}
-  - component: {fileID: 5573673695667605615}
   - component: {fileID: -5917199845933535950}
-  - component: {fileID: 2482391878509472188}
   m_Layer: 0
   m_Name: exp_lvl_04
   m_TagString: Loot
@@ -37,6 +37,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5573673695667605615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8968985337980674133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d9a42a76c41124793795a477c414cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2482391878509472188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8968985337980674133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58b1bbb9a070b04b94c6290c69b4969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &292891973080929197
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -137,18 +161,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5573673695667605615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8968985337980674133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79d9a42a76c41124793795a477c414cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!60 &-5917199845933535950
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -200,15 +212,3 @@ PolygonCollider2D:
       - {x: 0.24, y: -0.26999998}
       - {x: 0.24, y: 0.26999998}
   m_UseDelaunayMesh: 0
---- !u!114 &2482391878509472188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8968985337980674133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d58b1bbb9a070b04b94c6290c69b4969, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
