@@ -8,6 +8,7 @@ TagManager:
   - Weapon
   - PlayerWeapon
   - Loot
+  - LootItem
   layers:
   - Default
   - TransparentFX

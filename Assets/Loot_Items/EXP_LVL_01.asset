@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e8ef5618576cdf4b8763b1b4132ea38, type: 3}
   m_Name: EXP_LVL_01
   m_EditorClassIdentifier: 
-  lootSprite: {fileID: -1206409901, guid: 58b82325dcbb2804986ad3df9a050bc8, type: 3}
   lootName: EXP01
   dropChance: 100
+  healthRestoreAmount: 0
+  lootPrefab: {fileID: 4498764965408514338, guid: 57deb175f4d8c80408691b8ca80dc6c9, type: 3}

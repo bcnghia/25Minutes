@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LootBag : MonoBehaviour
 {
-    public GameObject dropItemPrefab;
     public List<Loot> lootList = new List<Loot>();
 
     Loot GetLoot()
@@ -25,14 +24,13 @@ public class LootBag : MonoBehaviour
         }
         return null;
     }
-    
+
     public void InstantiateLoot(Vector3 spawnPosition)
     {
         Loot dropItem = GetLoot();
-        if(dropItem != null)
+        if (dropItem != null && dropItem.lootPrefab != null)
         {
-            GameObject lootGameObject = Instantiate(dropItemPrefab, spawnPosition, Quaternion.identity);
-            lootGameObject.GetComponent<SpriteRenderer>().sprite = dropItem.lootSprite;
+            GameObject lootGameObject = Instantiate(dropItem.lootPrefab, spawnPosition, Quaternion.identity);
 
             float dropForce = 20f;
             Vector2 dropDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));

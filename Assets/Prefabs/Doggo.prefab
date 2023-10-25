@@ -54,6 +54,7 @@ MonoBehaviour:
   moveSpeed: 3
   deathAnimation: {fileID: 1905551391008287442, guid: 8e443c27ac5adc041b34b323cb5415a0, type: 3}
   chasingPlayer: 1
+  enemyDamage: 10
 --- !u!212 &1803090401128994891
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -249,7 +250,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90ed9653d35ea24dabe17dad75e4f67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropItemPrefab: {fileID: 3004039809812288249, guid: 826546600905d9745a7e8818ff4306ac, type: 3}
   lootList:
   - {fileID: 11400000, guid: 3e7fb3f656f754d4e9b1b69563757f69, type: 2}
   - {fileID: 11400000, guid: 8333d68adf086c447b63686abf69509a, type: 2}
@@ -257,6 +257,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5ab07f5dcae3cc643b49a6c764a9e1fb, type: 2}
   - {fileID: 11400000, guid: b1a921d3e53b8c64d954ea247f763851, type: 2}
   - {fileID: 11400000, guid: 2dbbdad6f92256649b7dd8d0b7ee6c4c, type: 2}
-  - {fileID: 11400000, guid: a8cb051621c6b0445aa035f5ed9b5ed6, type: 2}
-  - {fileID: 11400000, guid: 1e8e68011af5db04eac333b048f68c10, type: 2}
-  - {fileID: 11400000, guid: 9be8545638a3925439beb227aeab4f5a, type: 2}

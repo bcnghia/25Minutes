@@ -30,6 +30,9 @@ public class Player : MonoBehaviour
                 collision.GetComponent<Enemies>().TakeDamage(5);
             }
         }
+
+
+
     }
 
     // Thêm phương thức để hồi máu
@@ -57,6 +60,7 @@ public class Player : MonoBehaviour
             Debug.Log("YOU ARE DEATH: " + damage);
         }
     }
+
 
     //public void IncreaseHealth(int amount)
     //{
