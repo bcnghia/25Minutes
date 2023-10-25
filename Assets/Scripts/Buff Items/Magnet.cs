@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Magnet : MonoBehaviour
+public class Magnet : BuffItems
 {
     private Transform Player;
-    void Start()
+    protected override void Start()
     {
         Player = GameObject.Find("Player").GetComponent<Transform>();
     }
 
-    void Update()
+    protected override void Update()
     {
-        if (PlayerMovement.isMagnet == true)
+        if (PlayerItems.isMagnet == true)
         {
             transform.position = Vector3.MoveTowards(transform.position, Player.position, 0.3f);
         }
