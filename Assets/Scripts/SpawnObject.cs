@@ -11,26 +11,8 @@ public class SpawnObject : MonoBehaviour
 
     void Start()
     {
-        //Destroy(this.gameObject, timeDestroy);
-
-        //Vector2 pos = this.gameObject.transform.position;
-
-        //GameObject spawn = (GameObject)Instantiate(objectSpawn);
-        //spawn.transform.position = pos;
         StartCoroutine(DestroyAndSpawn());
     }
-
-    //protected void Reset()
-    //{
-    //    this.LoadHolder();
-    //}
-
-    //protected void LoadHolder()
-    //{
-    //    if (this.holder != null) return;
-    //    this.holder = transform.Find("Holder");
-    //    Debug.Log(transform.name + ": LoadHolder", gameObject);
-    //}
     IEnumerator DestroyAndSpawn()
     {
         yield return new WaitForSeconds(timeDestroy);  // Đợi thời gian timeDestroy r mới hủy

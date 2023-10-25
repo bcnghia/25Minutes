@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4613521421034207539}
   - component: {fileID: 4105825484666758291}
+  - component: {fileID: -1016888531673389932}
   - component: {fileID: 8358776225223202640}
   - component: {fileID: 6462704470304630493}
   - component: {fileID: 7391910714776804980}
   - component: {fileID: 6187822001623575547}
-  - component: {fileID: -1016888531673389932}
   m_Layer: 0
   m_Name: Doggo 2
   m_TagString: Enemy
@@ -55,6 +55,26 @@ MonoBehaviour:
   deathAnimation: {fileID: 8044361183931621804, guid: 8e3c47ae6aa0bac41a6658e1bda87f43, type: 3}
   chasingPlayer: 1
   enemyDamage: 10
+--- !u!114 &-1016888531673389932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8790659877434810062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f90ed9653d35ea24dabe17dad75e4f67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootList:
+  - {fileID: 11400000, guid: 3e7fb3f656f754d4e9b1b69563757f69, type: 2}
+  - {fileID: 11400000, guid: 8333d68adf086c447b63686abf69509a, type: 2}
+  - {fileID: 11400000, guid: 85f83e5dbe631db47830d9b0a349d797, type: 2}
+  - {fileID: 11400000, guid: 5ab07f5dcae3cc643b49a6c764a9e1fb, type: 2}
+  - {fileID: 11400000, guid: b1a921d3e53b8c64d954ea247f763851, type: 2}
+  - {fileID: 11400000, guid: 2dbbdad6f92256649b7dd8d0b7ee6c4c, type: 2}
+  - {fileID: 11400000, guid: cff1a2c77fde3de4ca9b689040fe4f8a, type: 2}
 --- !u!212 &8358776225223202640
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -207,23 +227,3 @@ PolygonCollider2D:
       - {x: 0.19999999, y: -0.015}
       - {x: 0.19999999, y: 0.13499999}
   m_UseDelaunayMesh: 0
---- !u!114 &-1016888531673389932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8790659877434810062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f90ed9653d35ea24dabe17dad75e4f67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lootList:
-  - {fileID: 11400000, guid: 3e7fb3f656f754d4e9b1b69563757f69, type: 2}
-  - {fileID: 11400000, guid: 8333d68adf086c447b63686abf69509a, type: 2}
-  - {fileID: 11400000, guid: 85f83e5dbe631db47830d9b0a349d797, type: 2}
-  - {fileID: 11400000, guid: 5ab07f5dcae3cc643b49a6c764a9e1fb, type: 2}
-  - {fileID: 11400000, guid: b1a921d3e53b8c64d954ea247f763851, type: 2}
-  - {fileID: 11400000, guid: 2dbbdad6f92256649b7dd8d0b7ee6c4c, type: 2}
-  - {fileID: 11400000, guid: cff1a2c77fde3de4ca9b689040fe4f8a, type: 2}
