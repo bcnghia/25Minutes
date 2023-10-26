@@ -10,6 +10,7 @@ TagManager:
   - Loot
   - LootItem
   - Magnet
+  - Healing
   layers:
   - Default
   - TransparentFX

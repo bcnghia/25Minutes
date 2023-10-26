@@ -8,7 +8,7 @@ public class PlayerItems : MonoBehaviour
     public Rigidbody2D rb;
     
     public static bool isMagnet = false;
-    private float magnetDuration = 3.0f; // Độ dài thời gian hút (5 giây)
+    private float magnetDuration = 3.0f; // Độ dài thời gian hút
     private float magnetTimer = 0.0f; // Thời gian đếm ngược khi đang hút
 
     void Awake()
@@ -20,7 +20,7 @@ public class PlayerItems : MonoBehaviour
     void FixedUpdate()
     {
         pm.Move(); // Xử lý hút
-
+        ///////////////////////////////////////////////////////////////////
         if (isMagnet && magnetTimer > 0)
         {   
             magnetTimer -= Time.fixedDeltaTime; // Đếm ngược thời gian
@@ -30,6 +30,8 @@ public class PlayerItems : MonoBehaviour
             // Khi hết thời gian hút, tắt Magnet
             isMagnet = false;
         }
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -39,5 +41,14 @@ public class PlayerItems : MonoBehaviour
             isMagnet = true;
             magnetTimer = magnetDuration;
         }
+
+        //if (collision.tag == "Healing")
+        //{
+        //    //GetComponent<Player>().Healing();
+        //    //Debug.Log("Healing "+gameObject.name);
+        //    isHealing = true;
+        //    healingTimer = healingDuration;
+        //}
+
     }
 }

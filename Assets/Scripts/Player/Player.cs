@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int maxHealth = 1000;
-    public int currentHealth;
+    public float maxHealth = 1000;
+    public float currentHealth;
 
     public HealthBar healthBar;
 
@@ -33,11 +33,11 @@ public class Player : MonoBehaviour
     }
 
     // Thêm phương thức để hồi máu
-    public void RestoreHealth(int amount)
+    public void Healing()
     {
         if (currentHealth < maxHealth)
         {
-            currentHealth += amount;
+            currentHealth += 0.2f * maxHealth;
             if (currentHealth > maxHealth)
             {
                 currentHealth = maxHealth;

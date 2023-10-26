@@ -10,44 +10,17 @@ public class PickUp : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Collected Item");
-            CollectLoot(other.GetComponent<Player>());
+            CollectLoot();
         }
     }
-    public void CollectLoot(Player player)
+    public void CollectLoot()
     {
-        //Loot lootToCollect = FindLootByLootName("Chicken");
-        //Loot lootToCollect2 = FindLootByLootName("Cake");
-        //Loot lootToCollect3 = FindLootByLootName("Hamburger");
-
-        //if (lootToCollect != null)
+        //if (gameObject.tag == "Healing")
         //{
-        //    if (lootToCollect.lootName == "Chicken" && player != null)
-        //    {
-        //        // Hồi máu cho người chơi bằng cách gọi phương thức RestoreHealth
-
-        //    }
+        //    GetComponent<Player>().Healing();
+        //    //HealingHP();
+        //    Debug.Log("Healing");
         //}
-
-        //if (lootToCollect2 != null)
-        //{
-        //    if (lootToCollect2.lootName == "Cake" && player != null)
-        //    {
-
-        //    }
-        //}
-
-        //if (lootToCollect3 != null)
-        //{
-        //    if (lootToCollect3.lootName == "Hamburger" && player != null)
-        //    {
-
-        //    }
-        //}
-
-        
-        
-
-
         // Hủy đối tượng khi nhặt vật phẩm
         Destroy(gameObject);
     }
