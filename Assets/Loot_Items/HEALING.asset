@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: HEALING
   m_EditorClassIdentifier: 
   lootName: Healing
-  dropChance: 100
+  dropChance: 30
   lootPrefab: {fileID: 4109530417190709799, guid: aefe08cb8ac29864fbbfbdf46938f46b, type: 3}

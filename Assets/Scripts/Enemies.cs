@@ -38,10 +38,7 @@ public class Enemies : MonoBehaviour
 
         if (health <= 0)
         {
-            // Gọi ra từ hàm LootBag để quái rớt đồ
-            GetComponent<LootBag>().InstantiateLoot(transform.position);
-            Destroy(gameObject);
-            Debug.Log("Enemy die: " + damage);
+            Die();
         }
     }
 
@@ -86,8 +83,7 @@ public class Enemies : MonoBehaviour
         {
             if (health <= 0)
             {
-                PlayExplosion();
-                Destroy(gameObject);
+                Die();
             }
 
             // Gây sát thương cho người chơi
@@ -120,10 +116,10 @@ public class Enemies : MonoBehaviour
     }
 
     // Hàm để bật hoặc tắt chế độ theo đuổi người chơi
-    public void SetChasePlayer(bool chase)
-    {
-        chasingPlayer = chase;
-    }
+    //public void SetChasePlayer(bool chase)
+    //{
+    //    chasingPlayer = chase;
+    //}
 
     // Hàm để thực hiện hành động theo đuổi người chơi
     void ChasePlayer()
@@ -132,6 +128,11 @@ public class Enemies : MonoBehaviour
         // Ví dụ: Di chuyển theo hướng tới vị trí của người chơi
         Vector3 direction = (player.position - transform.position).normalized;
         transform.Translate(direction * moveSpeed * Time.deltaTime);
+
+        //if (Vector2.Distance(transform.position, player.position) > 3)
+        //{
+        //    transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+        //} // Nên dùng cho boss để boss giữ khoảng cách
     }
 
 
@@ -141,5 +142,20 @@ public class Enemies : MonoBehaviour
         Vector2 position = transform.position;
         position = new Vector2(position.x, position.y - moveSpeed * Time.deltaTime);
         transform.position = position;
+
+        //if (Vector2.Distance(transform.position, player.position) > 3)
+        //{
+        //    transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+        //}
+    }
+
+    void Die()
+    {
+        // Gọi ra từ hàm LootBag để quái rớt đồ
+        GetComponent<LootBag>().InstantiateLoot(transform.position);
+        PlayExplosion();
+        ExperienceManager.Instance.AddExperience(enemyScore);
+        Destroy(gameObject);
+        Debug.Log("Enemy die");
     }
 }

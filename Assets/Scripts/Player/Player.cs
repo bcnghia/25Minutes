@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float maxHealth = 1000;
-    public float currentHealth;
+    [SerializeField] private float currentHealth, maxHealth;
+    [SerializeField] private float currentExperience, maxExperience;
+    [SerializeField] private int currentLevel = 1;
 
     public HealthBar healthBar;
+    public ExperienceBar experienceBar;
 
     public bool isAttacking; // Tạo biến để xác định trạng thái tấn công
 
@@ -15,6 +17,11 @@ public class Player : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+
+        currentExperience = 0;
+        experienceBar.SetExperience(currentExperience);
+        experienceBar.SetMaxExperience(maxExperience);
+
         isAttacking = false; // Ban đầu đặt trạng thái tấn công là false
 
     }
@@ -58,17 +65,39 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        // Subscribe Event
+        ExperienceManager.Instance.OnExperienceChange += HandleExperienceChange;
+    }
 
-    //public void IncreaseHealth(int amount)
-    //{
-    //    currentHealth += amount;
+    private void OnDisable()
+    {
+        // Unsubscribe from Event
+        ExperienceManager.Instance.OnExperienceChange -= HandleExperienceChange;
+    }
 
-    //    if (currentHealth > maxHealth)
-    //    {
-    //        currentHealth = maxHealth;
-    //    }
+    private void HandleExperienceChange(int newExperience)
+    {
+        currentExperience += newExperience;
+        experienceBar.SetExperience(currentExperience);
+        if(currentExperience >= maxExperience)
+        {
+            LevelUp();
+        }
+    }
 
-    //    healthBar.SetHealth(currentHealth);
-    //}
+    private void LevelUp()
+    {
+        maxHealth += 10; // có thể đặt biến để tùy chỉnh ở ngoài
+        healthBar.SetMaxHealth(maxHealth);
+        //currentHealth = maxHealth; // hồi máu khi nâng cấp
 
+        currentLevel++;
+
+        currentExperience = 0;
+        experienceBar.SetExperience(currentExperience);
+        maxExperience += 100; // có thể đặt biến để tùy chỉnh ở ngoài
+        experienceBar.SetMaxExperience(maxExperience);
+    }
 }
