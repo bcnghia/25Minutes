@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Player : MonoBehaviour
 
     public HealthBar healthBar;
     public ExperienceBar experienceBar;
+    public Text level;
 
     public bool isAttacking; // Tạo biến để xác định trạng thái tấn công
 
@@ -17,6 +19,7 @@ public class Player : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        level.text = "LV : " + currentLevel;
 
         currentExperience = 0;
         experienceBar.SetExperience(currentExperience);
@@ -65,19 +68,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        // Subscribe Event
-        ExperienceManager.Instance.OnExperienceChange += HandleExperienceChange;
-    }
-
-    private void OnDisable()
-    {
-        // Unsubscribe from Event
-        ExperienceManager.Instance.OnExperienceChange -= HandleExperienceChange;
-    }
-
-    private void HandleExperienceChange(int newExperience)
+    public void IncreaseExp(float newExperience)
     {
         currentExperience += newExperience;
         experienceBar.SetExperience(currentExperience);
@@ -91,9 +82,11 @@ public class Player : MonoBehaviour
     {
         maxHealth += 10; // có thể đặt biến để tùy chỉnh ở ngoài
         healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetHealth(currentHealth);
         //currentHealth = maxHealth; // hồi máu khi nâng cấp
 
         currentLevel++;
+        level.text = "LV : " + currentLevel;
 
         currentExperience = 0;
         experienceBar.SetExperience(currentExperience);

@@ -5,10 +5,17 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
+    [SerializeField] private float experience;
+    Player player;
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            player.IncreaseExp(experience);
             Debug.Log("Collected Item");
             CollectLoot();
         }

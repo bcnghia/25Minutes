@@ -18,14 +18,16 @@ public class Enemies : MonoBehaviour
     private bool chasingPlayer = false; // Dí theo mục tiêu
     private SpriteRenderer spriteRenderer;
 
-    private Transform player;
+    private Transform playerTransform;
+    Player playerScript;
 
     [SerializeField] private int enemyDamage = 10; // Damage của quái
 
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        playerScript = playerTransform.GetComponent<Player>();
         //scoreUIText = GameObject.FindGameObjectWithTag("ScoreText");
 
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -44,9 +46,9 @@ public class Enemies : MonoBehaviour
 
     void Update()
     {
-        if (player != null)
+        if (playerTransform != null)
         {
-            Vector3 direction = player.position - transform.position;
+            Vector3 direction = playerTransform.position - transform.position;
 
             if (direction.x < 0)
             {
@@ -60,7 +62,7 @@ public class Enemies : MonoBehaviour
             }
         }
 
-        if (chasingPlayer && player != null)
+        if (chasingPlayer && playerTransform != null)
         {
             ChasePlayer();
         }
@@ -126,7 +128,7 @@ public class Enemies : MonoBehaviour
     {
         // Thực hiện các hành động liên quan đến việc theo đuổi người chơi ở đây
         // Ví dụ: Di chuyển theo hướng tới vị trí của người chơi
-        Vector3 direction = (player.position - transform.position).normalized;
+        Vector3 direction = (playerTransform.position - transform.position).normalized;
         transform.Translate(direction * moveSpeed * Time.deltaTime);
 
         //if (Vector2.Distance(transform.position, player.position) > 3)
@@ -154,8 +156,10 @@ public class Enemies : MonoBehaviour
         // Gọi ra từ hàm LootBag để quái rớt đồ
         GetComponent<LootBag>().InstantiateLoot(transform.position);
         PlayExplosion();
-        ExperienceManager.Instance.AddExperience(enemyScore);
         Destroy(gameObject);
         Debug.Log("Enemy die");
+        // Tăng Exp cho người chơi khi quái chết
+        // hoặc muốn hợp lý thì tách riêng ra để khi đánh được quái thì bật, tránh khi quái tự đụng cũng có exp
+        playerScript.IncreaseExp(enemyScore);
     }
 }
