@@ -30,6 +30,7 @@ public class Weapon : MonoBehaviour
         // Gắn Audio Source cho script
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = attackAudioClip;
+        audioSource.volume = 0.5f;
 
         StartCoroutine(AttackLoop(currentAttackSpeed));
     }

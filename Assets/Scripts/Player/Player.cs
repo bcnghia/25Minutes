@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         level.text = "LV : " + currentLevel;
+        //health.text = currentHealth.ToString() + " / " + maxHealth.ToString();
 
         currentExperience = 0;
         experienceBar.SetExperience(currentExperience);
@@ -52,14 +53,14 @@ public class Player : MonoBehaviour
             {
                 currentHealth = maxHealth;
             }
-            healthBar.SetHealth(currentHealth);
+            healthBar.SetHealth(currentHealth,maxHealth);
         }
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
+        healthBar.SetHealth(currentHealth,maxHealth);
 
         if (currentHealth <= 0)
         {
@@ -82,7 +83,7 @@ public class Player : MonoBehaviour
     {
         maxHealth += 10; // có thể đặt biến để tùy chỉnh ở ngoài
         healthBar.SetMaxHealth(maxHealth);
-        healthBar.SetHealth(currentHealth);
+        healthBar.SetHealth(currentHealth,maxHealth);
         //currentHealth = maxHealth; // hồi máu khi nâng cấp
 
         currentLevel++;
