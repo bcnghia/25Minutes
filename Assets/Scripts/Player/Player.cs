@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
 
     public HealthBar healthBar;
     public ExperienceBar experienceBar;
-    public Text level;
+    //public Text level;
 
     public bool isAttacking; // Tạo biến để xác định trạng thái tấn công
 
@@ -19,11 +19,11 @@ public class Player : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-        level.text = "LV : " + currentLevel;
+        //level.text = "LV : " + currentLevel;
         //health.text = currentHealth.ToString() + " / " + maxHealth.ToString();
 
         currentExperience = 0;
-        experienceBar.SetExperience(currentExperience);
+        experienceBar.SetExperience(currentExperience,currentLevel);
         experienceBar.SetMaxExperience(maxExperience);
 
         isAttacking = false; // Ban đầu đặt trạng thái tấn công là false
@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
     public void IncreaseExp(float newExperience)
     {
         currentExperience += newExperience;
-        experienceBar.SetExperience(currentExperience);
+        experienceBar.SetExperience(currentExperience, currentLevel);
         if(currentExperience >= maxExperience)
         {
             LevelUp();
@@ -87,10 +87,10 @@ public class Player : MonoBehaviour
         //currentHealth = maxHealth; // hồi máu khi nâng cấp
 
         currentLevel++;
-        level.text = "LV : " + currentLevel;
+        //level.text = "LV : " + currentLevel;
 
         currentExperience = 0;
-        experienceBar.SetExperience(currentExperience);
+        experienceBar.SetExperience(currentExperience,currentLevel);
         maxExperience += 100; // có thể đặt biến để tùy chỉnh ở ngoài
         experienceBar.SetMaxExperience(maxExperience);
     }
