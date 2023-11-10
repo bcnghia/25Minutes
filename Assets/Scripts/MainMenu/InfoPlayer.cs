@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class InfoPlayer : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI hpText;
+    [SerializeField] private TextMeshProUGUI hpTextPause, hpTextLevelUp;
 
     Player player;
     float curHealth, maxHealth;
@@ -26,6 +26,8 @@ public class InfoPlayer : MonoBehaviour
     {
         curHealth = player.GetHealth();
         maxHealth = player.GetMaxHealth();
-        hpText.text = curHealth + " / " + maxHealth;
+        hpTextPause.text = curHealth + " / " + maxHealth;
+        hpTextLevelUp.text = curHealth + " / " + maxHealth;
+
     }
 }
