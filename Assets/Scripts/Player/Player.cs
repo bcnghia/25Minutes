@@ -94,4 +94,14 @@ public class Player : MonoBehaviour
         maxExperience += 100; // có thể đặt biến để tùy chỉnh ở ngoài
         experienceBar.SetMaxExperience(maxExperience);
     }
+
+    public float GetHealth()
+    {
+        return currentHealth;
+    }
+
+    public float GetMaxHealth()
+    {
+        return maxHealth;
+    }
 }
