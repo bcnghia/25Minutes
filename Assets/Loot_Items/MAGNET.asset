@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MAGNET
   m_EditorClassIdentifier: 
   lootName: Magnet
-  dropChance: 1
+  dropChance: 5
   lootPrefab: {fileID: 2086731116980715616, guid: 84644e865637dc648b96c8ac25cdc9da, type: 3}
