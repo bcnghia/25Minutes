@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public GameObject ui;
+    public GameObject levelUp;
+
     [SerializeField] private float currentHealth, maxHealth;
     [SerializeField] private float currentExperience, maxExperience;
     [SerializeField] private int currentLevel = 1;
@@ -76,6 +79,9 @@ public class Player : MonoBehaviour
         if(currentExperience >= maxExperience)
         {
             LevelUp();
+            ui.GetComponent<LevelUpMenu>().GetRandomBuffItem();
+            levelUp.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 

@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Magnet : BuffItems
+public class Magnet : MonoBehaviour
 {
     private Transform Player;
-    protected override void Start()
+    protected void Start()
     {
         Player = GameObject.Find("Player").GetComponent<Transform>();
     }
 
-    protected override void Update()
+    protected void Update()
     {
         if (PlayerItems.isMagnet == true)
         {

@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Healing : BuffItems
+public class Healing : MonoBehaviour
 {
     Player player;
 
-    protected override void Start()
+    protected void Start()
     {
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
     }
