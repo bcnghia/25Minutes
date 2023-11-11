@@ -50,6 +50,7 @@ MonoBehaviour:
     v\xE0 s\u1EE9c m\u1EA1nh c\u1EE7a chi\u1EBFn binh \u0111\u1EBFn t\u1EEB v\xF9ng
     \u0111\u1EA5t Th\xE1nh. T\u0103ng 10% s\u1EE9c m\u1EA1nh t\u1EA5n c\xF4ng (ATK)
     cho nh\xE2n v\u1EADt."
+  ratioSPD: 0
 --- !u!212 &4356289252697584893
 SpriteRenderer:
   m_ObjectHideFlags: 0

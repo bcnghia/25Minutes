@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     Vector2 moveDir;
 
+    float ratioSPD = 0f;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -42,4 +44,11 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(moveDir.x * moveSpeed, moveDir.y * moveSpeed);
     }
+    
+    public void SetRatioSPD(float ratio)
+    {
+        ratioSPD += ratio;
+    }
+
+    public float GetRatioSPD() { return ratioSPD; }
 }

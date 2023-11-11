@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 923303455716830129}
   - component: {fileID: 5982314129152965976}
-  - component: {fileID: 8788187247108491602}
   - component: {fileID: 1725126211721834019}
   m_Layer: 0
   m_Name: SPD Item
@@ -51,18 +50,7 @@ MonoBehaviour:
     ch\u1EBF t\xE1c t\u1EEB ch\u1EA5t li\u1EC7u da \u0111en u \xE1m v\xE0 l\u1EDBp
     ph\u1EE7 titan. T\u0103ng 10% t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n (SPD) cho
     nh\xE2n v\u1EADt."
---- !u!114 &8788187247108491602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8502809700921486694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 109f6d25773d237449ea88bc3e764cc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  ratioSPD: 10
 --- !u!212 &1725126211721834019
 SpriteRenderer:
   m_ObjectHideFlags: 0

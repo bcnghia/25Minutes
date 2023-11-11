@@ -52,6 +52,7 @@ MonoBehaviour:
     (AttackSpeed), m\u1ED7i \u0111\xF2n \u0111\xE1nh c\u1EE7a b\u1EA1n l\xE0 m\u1ED9t
     l\u1EDDi h\xE1t tri\u1EC7u h\u1ED3i s\u1EE9c m\u1EA1nh c\u1EE7a c\xE1c v\u1ECB
     th\u1EA7n."
+  ratioSPD: 0
 --- !u!212 &6831269497060787027
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -52,6 +52,7 @@ MonoBehaviour:
     mang t\u1EDBi n\u1ED7i s\u1EE3 h\xE3i, m\xE0 c\xF2n g\xE2y 10% h\xFAt m\xE1u
     (LifeSteal) d\u1EF1a tr\xEAn s\xE1t th\u01B0\u01A1ng g\xE2y cho \u0111\u1ECBch,
     t\xE1i t\u1EA1o n\u0103ng l\u01B0\u1EE3ng cho b\u1EA1n."
+  ratioSPD: 0
 --- !u!212 &6140694193066590030
 SpriteRenderer:
   m_ObjectHideFlags: 0

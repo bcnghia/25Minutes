@@ -18,6 +18,8 @@ public class LevelUpMenu : MonoBehaviour
 
     [Header("Description Buff Item")]
     public TextMeshProUGUI desItem1, desItem2, desItem3;
+
+    List<GameObject> randomBuffItems = new List<GameObject>();
     void Start()
     {
         //GetRandomBuffItem();
@@ -25,7 +27,7 @@ public class LevelUpMenu : MonoBehaviour
 
     public void GetRandomBuffItem()
     {
-        List<GameObject> randomBuffItems = new List<GameObject>();
+        randomBuffItems.Clear();
 
         if (listBuffItems.Count >= 3)
         {
@@ -62,5 +64,9 @@ public class LevelUpMenu : MonoBehaviour
     {
         levelUp.SetActive(false);
         Time.timeScale = 1.0f;
+        for(int i = 0; i <randomBuffItems.Count;i++)
+        {
+            randomBuffItems[i].GetComponent<Items>().IncreaseIndex();
+        }
     }
 }
