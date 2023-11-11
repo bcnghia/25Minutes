@@ -48,9 +48,12 @@ MonoBehaviour:
   titleItem: "C\u1EDD L\xEA Titan"
   descriptionItem: "\"C\u1EDD L\xEA Titan\" - m\u1ED9t bi\u1EC3u t\u01B0\u1EE3ng
     c\u1EE7a s\u1EE9c m\u1EA1nh, b\u1EC1n b\u1EC9 v\xE0 s\u1EF1 s\xE1ng t\u1EA1o.
-    T\u0103ng 10% k\xEDch th\u01B0\u1EDBc v\u0169 kh\xED (SizeWeapon) cho nh\xE2n
+    T\u0103ng 5% k\xEDch th\u01B0\u1EDBc v\u0169 kh\xED (SizeWeapon) cho nh\xE2n
     v\u1EADt."
   ratioSPD: 0
+  ratioATK: 0
+  ratioAttackSpeed: 0
+  ratioSizeWeapon: 5
 --- !u!212 &120986968801486743
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -8,11 +8,11 @@ public class Weapon : MonoBehaviour
 
     //[SerializeField] private float damage;
 
-    [SerializeField] private float attackSpeed = 1.5f; // Tốc độ đánh
+    public float attackSpeed = 1.5f; // Tốc độ đánh
     public float currentAttackSpeed;
     // lấy tốc độ đánh HIỆN TẠI, đề phòng người dùng được buff tốc độ đánh
 
-    [SerializeField] float sizeWeapon;
+    public float sizeWeapon;
     // ý tưởng là bắt đầu game cho cây kiếm nhỏ, damage nhỏ
     // nâng cấp kiếm thì nâng size kiếm, damage kiếm => auto mạnh
 
@@ -20,6 +20,9 @@ public class Weapon : MonoBehaviour
     private AudioSource audioSource; // Thêm trường AudioSource
 
     bool isAttacking = false;
+
+    float ratioAttackSpeed = 0f;
+    float ratioSizeWeapon = 0f;
 
     private void Start()
     {
@@ -84,4 +87,18 @@ public class Weapon : MonoBehaviour
             delay = currentAttackSpeed; // cập nhật lại tốc độ đáhn cho weapon
         }
     }
+
+    public void SetRatioAttackSpeed(float ratio)
+    {
+        ratioAttackSpeed += ratio;
+    }
+
+    public void SetRatioSizeWeapon(float ratio)
+    {
+        ratioSizeWeapon += ratio;
+    }
+
+    public float GetRatioAttackSpeed() { return ratioAttackSpeed; }
+
+    public float GetRatioSizeWeapon() { return ratioSizeWeapon; }
 }

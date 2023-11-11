@@ -51,6 +51,7 @@ MonoBehaviour:
     \u0111\u1EA5t Th\xE1nh. T\u0103ng 10% s\u1EE9c m\u1EA1nh t\u1EA5n c\xF4ng (ATK)
     cho nh\xE2n v\u1EADt."
   ratioSPD: 0
+  ratioATK: 10
 --- !u!212 &4356289252697584893
 SpriteRenderer:
   m_ObjectHideFlags: 0

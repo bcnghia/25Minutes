@@ -48,9 +48,10 @@ MonoBehaviour:
   titleItem: Satan's Shoes
   descriptionItem: "\"Satan's Shoes\" \u2013 \u0111\xF4i gi\xE0y ma m\u1ECB \u0111\u01B0\u1EE3c
     ch\u1EBF t\xE1c t\u1EEB ch\u1EA5t li\u1EC7u da \u0111en u \xE1m v\xE0 l\u1EDBp
-    ph\u1EE7 titan. T\u0103ng 10% t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n (SPD) cho
-    nh\xE2n v\u1EADt."
-  ratioSPD: 10
+    ph\u1EE7 titan. T\u0103ng 5% t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n (SPD) cho nh\xE2n
+    v\u1EADt."
+  ratioSPD: 5
+  ratioATK: 0
 --- !u!212 &1725126211721834019
 SpriteRenderer:
   m_ObjectHideFlags: 0

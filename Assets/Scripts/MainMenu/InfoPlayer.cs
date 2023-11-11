@@ -6,15 +6,17 @@ using UnityEngine;
 public class InfoPlayer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI hpTextPause, hpTextLevelUp;
+    [SerializeField] private TextMeshProUGUI atkTextPause, atkTextLevelUp;
     [SerializeField] private TextMeshProUGUI spdTextPause, spdTextLevelUp;
 
     Player player;
     PlayerMovement playerMovement;
-    float curHealth, maxHealth;
+    WeaponCollider weaponCollider;
     void Start()
     {
-        playerMovement = GameObject.FindGameObjectWithTag("Player").transform.GetComponent<PlayerMovement>();
         player = GameObject.FindGameObjectWithTag("Player").transform.GetComponent<Player>();
+        playerMovement = GameObject.FindGameObjectWithTag("Player").transform.GetComponent<PlayerMovement>();
+        weaponCollider = GameObject.FindGameObjectWithTag("WeaponCollider").transform.GetComponent<WeaponCollider>();
 
         SetHealth();
     }
@@ -24,15 +26,21 @@ public class InfoPlayer : MonoBehaviour
     {
         SetHealth();
         SetRatioSPD();
+        SetRatioATK();
     }
 
     public void SetHealth()
     {
-        curHealth = player.GetHealth();
-        maxHealth = player.GetMaxHealth();
+        float curHealth = player.GetHealth();
+        float maxHealth = player.GetMaxHealth();
         hpTextPause.text = curHealth + " / " + maxHealth;
         hpTextLevelUp.text = curHealth + " / " + maxHealth;
+    }
 
+    public void SetRatioATK()
+    {
+        atkTextPause.text = $"+{weaponCollider.GetRatioATK()}%";
+        atkTextLevelUp.text = $"+{weaponCollider.GetRatioATK()}%";
     }
 
     public void SetRatioSPD()

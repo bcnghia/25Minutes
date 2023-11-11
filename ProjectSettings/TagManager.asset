@@ -6,11 +6,11 @@ TagManager:
   tags:
   - Enemy
   - Weapon
-  - PlayerWeapon
   - Loot
   - LootItem
   - Magnet
   - Healing
+  - WeaponCollider
   layers:
   - Default
   - TransparentFX

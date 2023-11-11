@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class WeaponCollider : MonoBehaviour
 {
-    [SerializeField] private float damage;
+    public float damage;
+
+    float ratioATK = 0f;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,4 +16,11 @@ public class WeaponCollider : MonoBehaviour
             collision.GetComponent<Enemies>().TakeDamage(damage);
         }
     }
+
+    public void SetRatioATK(float ratio)
+    {
+        ratioATK += ratio;
+    }
+
+    public float GetRatioATK() { return ratioATK; }
 }
