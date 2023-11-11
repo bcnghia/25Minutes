@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Gameplay1");
     }
     
-    public void ExitGame()
+    public void QuitGame()
     {
         Application.Quit();
     }
