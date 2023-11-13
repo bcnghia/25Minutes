@@ -46,7 +46,8 @@ public class Boss_Attack : StateMachineBehaviour
             _dashTime = dashTime;
             isDashing = true;
         }
-        if (_dashTime <= 0 && isDashing)
+
+        if (_dashTime <= 0 && isDashing == true)
         {
             moveSpeed -= dashBoost;
             isDashing = false;
