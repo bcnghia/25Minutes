@@ -6,7 +6,8 @@ using static UnityEditor.Progress;
 
 public class LevelUpMenu : MonoBehaviour
 {
-    public GameObject levelUp;
+    public GameObject levelUpPanel;
+    public GameObject skill1Button;
     
     private GameObject soundBackground;
     [SerializeField] private List<GameObject> listBuffItems;
@@ -67,8 +68,9 @@ public class LevelUpMenu : MonoBehaviour
         // Note: trường hợp (như cũ ở đây đang là 0.6f), sau này phát triển thêm Setting Menu -> setting Audio thì tính tiếp
         soundBackground.GetComponent<AudioSource>().volume = 0.6f;
         // ẩn panel nâng câp sau khi đã nâng
-        levelUp.SetActive(false);
-        levelUp.GetComponent<ActivePanel>().isSetActive = false;
+        levelUpPanel.SetActive(false);
+        levelUpPanel.GetComponent<ActivePanel>().isSetActive = false;
+        skill1Button.GetComponent<SpellCooldown>().Continue();
         Time.timeScale = 1.0f;
     }
 

@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public GameObject ui;
-    public GameObject levelUp;
+    public GameObject levelUpPanel;
+    public GameObject skill1Button;
 
     [SerializeField] private float currentHealth, maxHealth;
     [SerializeField] private float currentExperience, maxExperience;
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        healthBar.SetHealth(currentHealth, maxHealth);
         healthBar.SetMaxHealth(maxHealth);
         //level.text = "LV : " + currentLevel;
         //health.text = currentHealth.ToString() + " / " + maxHealth.ToString();
@@ -65,19 +67,24 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        healthBar.SetHealth(currentHealth,maxHealth);
 
         if (currentHealth <= 0)
         {
+            currentHealth = 0;
+            healthBar.SetHealth(currentHealth, maxHealth);
             Destroy(gameObject);
             Debug.Log("YOU ARE DEATH: " + damage);
+        }
+        else
+        {
+            healthBar.SetHealth(currentHealth,maxHealth);
         }
     }
 
     // thêm phương thức để hút máu. amountBlood == là số máu hút được -> lượng máu này được dùng để cộng vào máu hiện tại
     public void LifeSteal(float amountBlood)
     {
-        if (currentExperience < maxExperience)
+        if (currentHealth < maxHealth)
         {
             currentHealth += amountBlood;
             if (currentHealth > maxHealth)
@@ -100,8 +107,9 @@ public class Player : MonoBehaviour
             // Lấy thông tin Buff Item
             ui.GetComponent<LevelUpMenu>().GetRandomBuffItem();
             // Hiện panel lvl Up sau khi đã load được Buff Item
-            levelUp.SetActive(true);
-            levelUp.GetComponent<ActivePanel>().isSetActive = true;
+            levelUpPanel.SetActive(true);
+            levelUpPanel.GetComponent<ActivePanel>().isSetActive = true;
+            skill1Button.SetActive(false);
             Time.timeScale = 0f;
         }
     }

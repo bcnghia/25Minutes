@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject soundBackground;
     [SerializeField] private bool isPaused;
     [SerializeField] private GameObject levelUpPanel;
+    [SerializeField] private GameObject skill1Button;
 
     bool activeLevelUp;
 
@@ -44,6 +45,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(true);
         soundBackground.SetActive(false);
+        skill1Button.SetActive(false);
 
         Time.timeScale = 0f;
         isPaused = true;
@@ -52,7 +54,8 @@ public class PauseMenu : MonoBehaviour
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
-        soundBackground?.SetActive(true);
+        soundBackground.SetActive(true);
+        skill1Button.GetComponent<SpellCooldown>().Continue();
 
         Time.timeScale = 1f;
         isPaused = false;
