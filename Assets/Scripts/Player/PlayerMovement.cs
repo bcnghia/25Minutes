@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,14 +13,19 @@ public class PlayerMovement : MonoBehaviour
 
 
     public float dashBoost;
+    // Thời gian có thể lướt
     public float dashTime;
-    private float _dashTime;
+    // Tiến trình thời gian lướt
+    float dashTimer;
     bool isDashing = false;
 
 
-    private bool canDash = true; 
-    public float dashCooldown = 3f;  // Cooldown cho nút dash
+    bool canDash = true;
+    // Cooldown - thời gian hồi chiêu 
+    public float dashCooldown = 3f;
 
+    public TMP_Text textCooldown;
+    public Image imageCooldown;
 
     public GameObject ghostEffect;
     public float ghostDelaySeconds;
@@ -34,23 +41,23 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    private void Start()
+    {
+        textCooldown.gameObject.SetActive(false);
+        imageCooldown.fillAmount = 0f;
+    }
+
     void Update()
     {
         InputManagement();
 
 
-        if (Input.GetKeyDown(KeyCode.Space) && canDash)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            moveSpeed += dashBoost;
-            _dashTime = dashTime;
-            isDashing = true;
-            StartDashEffect();
-
-            // Không cho phép sử dụng Dash trong khoảng thời gian cooldown
-            StartCoroutine(DashCooldown());
+            UseSpell();
         }
 
-        if (_dashTime <= 0 && isDashing == true)
+        if (dashTimer <= 0 && isDashing == true)
         {
             moveSpeed -= dashBoost;
             isDashing = false;
@@ -59,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
 
         else
         {
-            _dashTime -= Time.deltaTime;
+            dashTimer -= Time.deltaTime;
         }
     }
 
@@ -83,6 +90,20 @@ public class PlayerMovement : MonoBehaviour
     public void Move()
     {
         rb.velocity = new Vector2(moveDir.x * moveSpeed, moveDir.y * moveSpeed);
+    }
+
+    public void UseSpell()
+    {
+        if (canDash)
+        {
+            moveSpeed += dashBoost;
+            dashTimer = dashTime;
+            isDashing = true;
+            StartDashEffect();
+
+            // Không cho phép sử dụng Dash trong khoảng thời gian cooldown
+            StartCoroutine(DashCooldown());
+        }
     }
     
     public void SetRatioSPD(float ratio)
