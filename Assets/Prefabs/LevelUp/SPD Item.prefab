@@ -48,10 +48,10 @@ MonoBehaviour:
   titleItem: "\u0110\xF4i gi\xE0y c\u1EE7a Satan"
   descriptionItem: "\"\u0110\xF4i gi\xE0y c\u1EE7a Satan\" \u2013 \u0111\xF4i gi\xE0y
     ma m\u1ECB \u0111\u01B0\u1EE3c ch\u1EBF t\xE1c t\u1EEB v\u1EADt ch\u1EA5t u \xE1m
-    v\xE0 l\u1EDBp ph\u1EE7 titan. T\u0103ng 8% t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n
+    v\xE0 l\u1EDBp ph\u1EE7 titan. T\u0103ng 6% t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n
     cho nh\xE2n v\u1EADt, gi\xFAp b\u1EA1n nhanh \u0111\u1EBFn v\u1EDBi th\u1EBF
     gi\u1EDBi b\xEAn kia h\u01A1n."
-  ratioSPD: 8
+  ratioSPD: 6
   ratioATK: 0
   ratioAttackSpeed: 0
   ratioSizeWeapon: 0
