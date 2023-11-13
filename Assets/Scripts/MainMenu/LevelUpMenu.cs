@@ -60,14 +60,31 @@ public class LevelUpMenu : MonoBehaviour
         desItem3.text = randomBuffItems[2].GetComponent<Items>().GetDescriptionItem();
     }
 
-    public void UpgradeLevel()
+    private void UpgradeLevel()
     {
         levelUp.SetActive(false);
         levelUp.GetComponent<ActivePanel>().isSetActive = false;
         Time.timeScale = 1.0f;
-        for(int i = 0; i <randomBuffItems.Count;i++)
-        {
-            randomBuffItems[i].GetComponent<Items>().IncreaseIndex();
-        }
+    }
+
+    public void UpgradeLevel_Item1()
+    {
+        UpgradeLevel();
+
+        randomBuffItems[0].GetComponent<Items>().IncreaseIndex();
+    }
+
+    public void UpgradeLevel_Item2()
+    {
+        UpgradeLevel();
+
+        randomBuffItems[1].GetComponent<Items>().IncreaseIndex();
+    }
+
+    public void UpgradeLevel_Item3()
+    {
+        UpgradeLevel();
+
+        randomBuffItems[2].GetComponent<Items>().IncreaseIndex();
     }
 }
