@@ -63,6 +63,7 @@ public class LevelUpMenu : MonoBehaviour
     public void UpgradeLevel()
     {
         levelUp.SetActive(false);
+        levelUp.GetComponent<ActivePanel>().isSetActive = false;
         Time.timeScale = 1.0f;
         for(int i = 0; i <randomBuffItems.Count;i++)
         {

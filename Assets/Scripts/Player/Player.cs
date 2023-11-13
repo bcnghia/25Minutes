@@ -81,6 +81,7 @@ public class Player : MonoBehaviour
             LevelUp();
             ui.GetComponent<LevelUpMenu>().GetRandomBuffItem();
             levelUp.SetActive(true);
+            levelUp.GetComponent<ActivePanel>().isSetActive = true;
             Time.timeScale = 0f;
         }
     }

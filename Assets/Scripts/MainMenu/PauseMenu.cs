@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -9,23 +9,32 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject soundBackground;
     [SerializeField] private bool isPaused;
+    [SerializeField] private GameObject levelUpPanel;
+
+    bool activeLevelUp;
 
     void Start()
     {
         pauseMenu.SetActive(false);
+        activeLevelUp = levelUpPanel.GetComponent<ActivePanel>().isSetActive;
     }
 
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            if (isPaused)
+            // Đang nâng cấp thì không được ESC thoát ra
+            activeLevelUp = levelUpPanel.GetComponent<ActivePanel>().isSetActive;
+            if (!activeLevelUp)
             {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
+                if (isPaused)
+                {
+                    ResumeGame();
+                }
+                else
+                {
+                    PauseGame();
+                }
             }
         }
     }
