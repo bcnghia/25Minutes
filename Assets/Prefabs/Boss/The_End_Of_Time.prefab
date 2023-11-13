@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 6615203002654456056}
   - component: {fileID: -4710475635815187120}
   - component: {fileID: -7992347210056726238}
-  - component: {fileID: 3735391933587663298}
+  - component: {fileID: 1093700664188277918}
+  - component: {fileID: 868198149443083685}
   m_Layer: 0
   m_Name: The_End_Of_Time
   m_TagString: Enemy
@@ -160,16 +161,58 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.095, y: 0.16}
-      - {x: 0.105, y: 0.31}
-      - {x: -0.205, y: 0.31}
-      - {x: -0.225, y: 0.26999998}
-      - {x: -0.225, y: -0.14999999}
-      - {x: -0.21499999, y: -0.19}
-      - {x: -0.175, y: -0.31}
-      - {x: -0.125, y: -0.31}
-      - {x: -0.044999998, y: -0.07}
-      - {x: 0.225, y: -0.02}
+    - - {x: 0.078940034, y: 0.10864401}
+      - {x: 0.048155665, y: 0.12219447}
+      - {x: 0.010552883, y: 0.13877076}
+      - {x: -0.0056170225, y: 0.14586073}
+      - {x: -0.029182076, y: 0.15109032}
+      - {x: -0.04569328, y: 0.15830654}
+      - {x: -0.047330856, y: 0.18616152}
+      - {x: -0.05103135, y: 0.21074462}
+      - {x: -0.038155317, y: 0.22734994}
+      - {x: -0.0091763735, y: 0.24476135}
+      - {x: 0.03747189, y: 0.26949093}
+      - {x: 0.079125136, y: 0.27817947}
+      - {x: 0.09179592, y: 0.2968773}
+      - {x: 0.07677803, y: 0.31176388}
+      - {x: -0.066535905, y: 0.31440967}
+      - {x: -0.12513995, y: 0.29499823}
+      - {x: -0.16999781, y: 0.2637051}
+      - {x: -0.19677803, y: 0.23560447}
+      - {x: -0.19508362, y: 0.18969476}
+      - {x: -0.17721534, y: 0.18197328}
+      - {x: -0.15558457, y: 0.17387342}
+      - {x: -0.15467453, y: 0.1446104}
+      - {x: -0.17025697, y: 0.1396172}
+      - {x: -0.1959616, y: 0.12644786}
+      - {x: -0.22074866, y: 0.10037631}
+      - {x: -0.22903574, y: 0.07802284}
+      - {x: -0.23017424, y: 0.019903004}
+      - {x: -0.23022759, y: -0.044938862}
+      - {x: -0.22213578, y: -0.09405702}
+      - {x: -0.20744118, y: -0.14247479}
+      - {x: -0.20747478, y: -0.19}
+      - {x: -0.18947804, y: -0.22686934}
+      - {x: -0.17148292, y: -0.28155452}
+      - {x: -0.15994959, y: -0.316271}
+      - {x: -0.14255881, y: -0.3125084}
+      - {x: -0.13287199, y: -0.28797883}
+      - {x: -0.13861704, y: -0.24920452}
+      - {x: -0.12653744, y: -0.2122873}
+      - {x: -0.110613346, y: -0.16582566}
+      - {x: -0.085599184, y: -0.1519497}
+      - {x: -0.08247721, y: -0.09830892}
+      - {x: -0.056287806, y: -0.07}
+      - {x: -0.05099106, y: -0.046616852}
+      - {x: -0.039590597, y: -0.024635315}
+      - {x: -0.024415731, y: 0.0021939874}
+      - {x: 0.007961273, y: -0.0023645163}
+      - {x: 0.039192915, y: 0.026395619}
+      - {x: 0.07457423, y: 0.05075085}
+      - {x: 0.13521624, y: 0.025648773}
+      - {x: 0.17873597, y: -0.0017645955}
+      - {x: 0.2300168, y: -0.012474794}
+      - {x: 0.23291528, y: 0.010937095}
       - {x: 0.225, y: 0.04}
   m_UseDelaunayMesh: 0
 --- !u!114 &-4710475635815187120
@@ -184,12 +227,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6dd26ac5ea9fe428598c8a2bcdd7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 9999
   enemyScore: 1000
-  moveSpeed: 6
-  deathAnimation: {fileID: 8044361183931621804, guid: 8e3c47ae6aa0bac41a6658e1bda87f43, type: 3}
+  moveSpeed: 5
+  deathAnimation: {fileID: 7164033524235681739, guid: e8776affa4e9ea34b8521fc5f350e99f, type: 3}
   chasingPlayer: 1
-  enemyDamage: 100
+  enemyDamage: 1
 --- !u!114 &-7992347210056726238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,7 +262,28 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a47b278c9fa8fe6439a3078f100a30fc, type: 2}
   - {fileID: 11400000, guid: a47b278c9fa8fe6439a3078f100a30fc, type: 2}
   - {fileID: 11400000, guid: a47b278c9fa8fe6439a3078f100a30fc, type: 2}
---- !u!114 &3735391933587663298
+--- !u!95 &1093700664188277918
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106227576890988062}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9526c5112b6d4d044881b49d110b3ead, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &868198149443083685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

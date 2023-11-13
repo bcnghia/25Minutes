@@ -11,7 +11,7 @@ public class Enemies : MonoBehaviour
     [SerializeField] private float health;
 
     public int enemyScore;
-    public float moveSpeed;
+    [SerializeField] public float moveSpeed;
     public GameObject deathAnimation;
 
     [SerializeField]
@@ -162,4 +162,5 @@ public class Enemies : MonoBehaviour
         // hoặc muốn hợp lý thì tách riêng ra để khi đánh được quái thì bật, tránh khi quái tự đụng cũng có exp
         playerScript.IncreaseExp(enemyScore);
     }
+
 }
