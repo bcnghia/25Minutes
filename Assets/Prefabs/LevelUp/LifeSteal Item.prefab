@@ -48,11 +48,14 @@ MonoBehaviour:
   titleItem: "D\u01A1i Huy\u1EBFt Nguy\u1EC7t"
   descriptionItem: "Ch\xECm \u0111\u1EAFm trong b\xF3ng t\u1ED1i v\u1EDBi \"D\u01A1i
     Huy\u1EBFt Nguy\u1EC7t\" - bi\u1EC3u t\u01B0\u1EE3ng cho s\u1EF1 \u0111\u1ED9c
-    \xE1c v\xE0 t\xE0n nh\u1EABn. M\u1ED7i \u0111\xF2n \u0111\xE1nh kh\xF4ng ch\u1EC9
-    mang t\u1EDBi n\u1ED7i s\u1EE3 h\xE3i, m\xE0 c\xF2n g\xE2y 10% h\xFAt m\xE1u
-    (LifeSteal) d\u1EF1a tr\xEAn s\xE1t th\u01B0\u01A1ng g\xE2y cho \u0111\u1ECBch,
-    t\xE1i t\u1EA1o n\u0103ng l\u01B0\u1EE3ng cho b\u1EA1n."
+    \xE1c v\xE0 t\xE0n nh\u1EABn. Gi\u1EA3m 8% s\u1EE9c m\u1EA1nh t\u1EA5n c\xF4ng,
+    \u0111\u1ED3ng th\u1EDDi t\u0103ng 1% h\xFAt m\xE1u d\u1EF1a tr\xEAn s\xE1t th\u01B0\u01A1ng
+    g\xE2y cho \u0111\u1ECBch/s\u1ED1 l\u01B0\u1EE3ng m\xE1u c\u1EE7a n\u1EA1n nh\xE2n."
   ratioSPD: 0
+  ratioATK: -8
+  ratioAttackSpeed: 0
+  ratioSizeWeapon: 0
+  ratioLifeSteal: 1
 --- !u!212 &6140694193066590030
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ TagManager:
   - Healing
   - WeaponCollider
   - LevelUpPanel
+  - AudioSource
   layers:
   - Default
   - TransparentFX

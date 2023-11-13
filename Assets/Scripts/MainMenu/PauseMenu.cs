@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -55,5 +56,10 @@ public class PauseMenu : MonoBehaviour
 
         Time.timeScale = 1f;
         isPaused = false;
+    }
+
+    public void QuitGame()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

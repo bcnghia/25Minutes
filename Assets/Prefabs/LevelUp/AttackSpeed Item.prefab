@@ -48,14 +48,12 @@ MonoBehaviour:
   titleItem: "Thanh G\u01B0\u01A1m Olympus"
   descriptionItem: "\"Thanh G\u01B0\u01A1m Olympus\" - thanh ki\u1EBFm v\xF4 c\xF9ng
     m\u1EA1nh m\u1EBD, \u0111\u01B0\u1EE3c ch\u1EBF t\xE1c b\u1EDFi ch\xEDnh th\u1EA7n
-    Zeus. V\u1EDBi kh\u1EA3 n\u0103ng t\u0103ng 5% t\u1ED1c \u0111\u1ED9 \u0111\xE1nh
-    (AttackSpeed), m\u1ED7i \u0111\xF2n \u0111\xE1nh c\u1EE7a b\u1EA1n l\xE0 m\u1ED9t
-    l\u1EDDi h\xE1t tri\u1EC7u h\u1ED3i s\u1EE9c m\u1EA1nh c\u1EE7a c\xE1c v\u1ECB
-    th\u1EA7n."
+    Zeus. T\u0103ng 10% t\u1ED1c \u0111\u1ED9 \u0111\xE1nh."
   ratioSPD: 0
   ratioATK: 0
-  ratioAttackSpeed: 5
+  ratioAttackSpeed: 10
   ratioSizeWeapon: 0
+  ratioLifeSteal: 0
 --- !u!212 &6831269497060787027
 SpriteRenderer:
   m_ObjectHideFlags: 0

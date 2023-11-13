@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -7,7 +7,8 @@ using static UnityEditor.Progress;
 public class LevelUpMenu : MonoBehaviour
 {
     public GameObject levelUp;
-
+    
+    private GameObject soundBackground;
     [SerializeField] private List<GameObject> listBuffItems;
 
     [Header("Sprite Buff Item")]
@@ -22,7 +23,7 @@ public class LevelUpMenu : MonoBehaviour
     List<GameObject> randomBuffItems = new List<GameObject>();
     void Start()
     {
-        //GetRandomBuffItem();
+        soundBackground = GameObject.FindGameObjectWithTag("AudioSource");
     }
 
     public void GetRandomBuffItem()
@@ -62,6 +63,10 @@ public class LevelUpMenu : MonoBehaviour
 
     private void UpgradeLevel()
     {
+        // tăng âm lượng lại như cũ 
+        // Note: trường hợp (như cũ ở đây đang là 0.6f), sau này phát triển thêm Setting Menu -> setting Audio thì tính tiếp
+        soundBackground.GetComponent<AudioSource>().volume = 0.6f;
+        // ẩn panel nâng câp sau khi đã nâng
         levelUp.SetActive(false);
         levelUp.GetComponent<ActivePanel>().isSetActive = false;
         Time.timeScale = 1.0f;

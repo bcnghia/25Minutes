@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -37,6 +37,12 @@ public class InfoPlayer : MonoBehaviour
         SetRatioSPD();
     }
 
+    // Định dạng lại cách sắp xếp của chỉ số Ratio khi in lên Panel
+    public static string FormatNumberWithSign(float number)
+    {
+        return ((number >= 0) ? "+" + number.ToString() : number.ToString()) + "%";
+    }
+
     public void SetHealth()
     {
         float curHealth = player.GetHealth();
@@ -47,30 +53,31 @@ public class InfoPlayer : MonoBehaviour
 
     public void SetRatioSizeWeapon()
     {
-        sizeTextPause.text = $"+{weapon.GetRatioSizeWeapon()}%";
-        sizeTextLevelUp.text = $"+{weapon.GetRatioSizeWeapon()}%";
+        sizeTextPause.text = FormatNumberWithSign(weapon.GetRatioSizeWeapon());
+        sizeTextLevelUp.text = FormatNumberWithSign(weapon.GetRatioSizeWeapon());
     }
 
     public void SetRatioAttackSpeed()
     {
-        attackSpeedTextPause.text = $"+{weapon.GetRatioAttackSpeed()}%";
-        attackSpeedTextLevelUp.text = $"+{weapon.GetRatioAttackSpeed()}%";
+        attackSpeedTextPause.text = FormatNumberWithSign(weapon.GetRatioAttackSpeed());
+        attackSpeedTextLevelUp.text = FormatNumberWithSign(weapon.GetRatioAttackSpeed());
     }
 
     public void SetRatioATK()
     {
-        atkTextPause.text = $"+{weaponCollider.GetRatioATK()}%";
-        atkTextLevelUp.text = $"+{weaponCollider.GetRatioATK()}%";
+        atkTextPause.text = FormatNumberWithSign(weaponCollider.GetRatioATK());
+        atkTextLevelUp.text = FormatNumberWithSign(weaponCollider.GetRatioATK());
     }
 
     public void SetRatioLifeSteal()
     {
-
+        lifeStealTextPause.text = FormatNumberWithSign(weaponCollider.GetRatioLifeSteal());
+        lifeStealTextLevelUp.text = FormatNumberWithSign(weaponCollider.GetRatioLifeSteal());
     }
 
     public void SetRatioSPD()
     {
-        spdTextPause.text = $"+{playerMovement.GetRatioSPD()}%";
-        spdTextLevelUp.text = $"+{playerMovement.GetRatioSPD()}%";
+        spdTextPause.text = FormatNumberWithSign(playerMovement.GetRatioSPD());
+        spdTextLevelUp.text = FormatNumberWithSign(playerMovement.GetRatioSPD());
     }
 }

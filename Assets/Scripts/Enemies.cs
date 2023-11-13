@@ -163,4 +163,8 @@ public class Enemies : MonoBehaviour
         playerScript.IncreaseExp(enemyScore);
     }
 
+    public float GetHealth()
+    {
+        return health;
+    }
 }

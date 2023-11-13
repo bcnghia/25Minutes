@@ -12,6 +12,7 @@ public class Items : MonoBehaviour
     [SerializeField] private float ratioATK = 0;
     [SerializeField] private float ratioAttackSpeed = 0;
     [SerializeField] private float ratioSizeWeapon = 0;
+    [SerializeField] private float ratioLifeSteal = 0;
 
     public string GetTitleItem()
     {
@@ -35,7 +36,7 @@ public class Items : MonoBehaviour
 
     public void IncreaseIndex()
     {
-        if (ratioSPD > 0)
+        if (ratioSPD != 0)
         {
             PlayerMovement playerMovement = GameObject.FindGameObjectWithTag("Player").transform.GetComponent<PlayerMovement>();
 
@@ -43,7 +44,7 @@ public class Items : MonoBehaviour
             playerMovement.moveSpeed += playerMovement.moveSpeed * ratioSPD / 100;
         }
 
-        if (ratioATK > 0)
+        if (ratioATK != 0)
         {
             WeaponCollider weaponCollider = GameObject.FindGameObjectWithTag("WeaponCollider").transform.GetComponent<WeaponCollider>();
 
@@ -51,7 +52,7 @@ public class Items : MonoBehaviour
             weaponCollider.damage += weaponCollider.damage * ratioATK / 100;
         }
 
-        if (ratioAttackSpeed > 0)
+        if (ratioAttackSpeed != 0)
         {
             Weapon weapon = GameObject.FindGameObjectWithTag("Weapon").transform.GetComponent<Weapon>();
 
@@ -59,12 +60,19 @@ public class Items : MonoBehaviour
             weapon.attackSpeed += weapon.attackSpeed * ratioAttackSpeed / 100;
         }
 
-        if (ratioSizeWeapon > 0)
+        if (ratioSizeWeapon != 0)
         {
             Weapon weapon = GameObject.FindGameObjectWithTag("Weapon").transform.GetComponent<Weapon>();
 
             weapon.SetRatioSizeWeapon(ratioSizeWeapon);
             weapon.sizeWeapon += weapon.sizeWeapon * ratioSizeWeapon / 100;
+        }
+
+        if (ratioLifeSteal != 0)
+        {
+            WeaponCollider weaponCollider = GameObject.FindGameObjectWithTag("WeaponCollider").transform.GetComponent<WeaponCollider>();
+
+            weaponCollider.SetRatioLifeSteal(ratioLifeSteal);
         }
     }
 }

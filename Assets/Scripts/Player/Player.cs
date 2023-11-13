@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
 
     public bool isAttacking; // Tạo biến để xác định trạng thái tấn công
 
+    private GameObject soundBackground;
     void Start()
     {
         currentHealth = maxHealth;
@@ -31,6 +32,7 @@ public class Player : MonoBehaviour
 
         isAttacking = false; // Ban đầu đặt trạng thái tấn công là false
 
+        soundBackground = GameObject.FindGameObjectWithTag("AudioSource");
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -72,6 +74,20 @@ public class Player : MonoBehaviour
         }
     }
 
+    // thêm phương thức để hút máu. amountBlood == là số máu hút được -> lượng máu này được dùng để cộng vào máu hiện tại
+    public void LifeSteal(float amountBlood)
+    {
+        if (currentExperience < maxExperience)
+        {
+            currentHealth += amountBlood;
+            if (currentHealth > maxHealth)
+            {
+                currentHealth = maxHealth;
+            }
+            healthBar.SetHealth(currentHealth, maxHealth);
+        }
+    }
+
     public void IncreaseExp(float newExperience)
     {
         currentExperience += newExperience;
@@ -79,7 +95,11 @@ public class Player : MonoBehaviour
         if(currentExperience >= maxExperience)
         {
             LevelUp();
+            // giảm âm lượng nhạc nền
+            soundBackground.GetComponent<AudioSource>().volume = 0.2f;
+            // Lấy thông tin Buff Item
             ui.GetComponent<LevelUpMenu>().GetRandomBuffItem();
+            // Hiện panel lvl Up sau khi đã load được Buff Item
             levelUp.SetActive(true);
             levelUp.GetComponent<ActivePanel>().isSetActive = true;
             Time.timeScale = 0f;
