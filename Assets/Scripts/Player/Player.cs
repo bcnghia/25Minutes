@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public GameObject ui;
     public GameObject levelUpPanel;
     public GameObject skill1Button;
+    public GameObject hpExp;
 
     [SerializeField] private float currentHealth, maxHealth;
     [SerializeField] private float currentExperience, maxExperience;
@@ -24,7 +25,7 @@ public class Player : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetHealth(currentHealth, maxHealth);
-        healthBar.SetMaxHealth(maxHealth);
+        //healthBar.SetMaxHealth(maxHealth);
         //level.text = "LV : " + currentLevel;
         //health.text = currentHealth.ToString() + " / " + maxHealth.ToString();
 
@@ -110,6 +111,7 @@ public class Player : MonoBehaviour
             levelUpPanel.SetActive(true);
             levelUpPanel.GetComponent<ActivePanel>().isSetActive = true;
             skill1Button.SetActive(false);
+            hpExp.SetActive(false);
             Time.timeScale = 0f;
         }
     }
@@ -117,12 +119,9 @@ public class Player : MonoBehaviour
     private void LevelUp()
     {
         maxHealth += 10; // có thể đặt biến để tùy chỉnh ở ngoài
-        healthBar.SetMaxHealth(maxHealth);
         healthBar.SetHealth(currentHealth,maxHealth);
-        //currentHealth = maxHealth; // hồi máu khi nâng cấp
 
         currentLevel++;
-        //level.text = "LV : " + currentLevel;
 
         currentExperience = 0;
         experienceBar.SetExperience(currentExperience,currentLevel);

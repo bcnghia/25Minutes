@@ -8,6 +8,7 @@ public class LevelUpMenu : MonoBehaviour
 {
     public GameObject levelUpPanel;
     public GameObject skill1Button;
+    public GameObject hpExp;
     
     private GameObject soundBackground;
     [SerializeField] private List<GameObject> listBuffItems;
@@ -71,6 +72,7 @@ public class LevelUpMenu : MonoBehaviour
         levelUpPanel.SetActive(false);
         levelUpPanel.GetComponent<ActivePanel>().isSetActive = false;
         skill1Button.GetComponent<SpellCooldown>().Continue();
+        hpExp.SetActive(true);
         Time.timeScale = 1.0f;
     }
 
