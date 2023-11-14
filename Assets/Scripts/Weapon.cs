@@ -6,18 +6,13 @@ public class Weapon : MonoBehaviour
 {
     [SerializeField] private Animator animator;
 
-    //[SerializeField] private float damage;
-
     public float attackSpeed = 1.5f; // Tốc độ đánh
     public float currentAttackSpeed;
     // lấy tốc độ đánh HIỆN TẠI, đề phòng người dùng được buff tốc độ đánh
 
     public float sizeWeapon;
-    // ý tưởng là bắt đầu game cho cây kiếm nhỏ, damage nhỏ
-    // nâng cấp kiếm thì nâng size kiếm, damage kiếm => auto mạnh
 
-    [SerializeField] private AudioClip attackAudioClip; // Thêm trường AudioClip
-    private AudioSource audioSource; // Thêm trường AudioSource
+    public string sfxClipName;
 
     bool isAttacking = false;
 
@@ -29,11 +24,6 @@ public class Weapon : MonoBehaviour
         currentAttackSpeed = attackSpeed;
         transform.localScale = new Vector3(sizeWeapon, sizeWeapon, sizeWeapon);
         animator = GetComponent<Animator>();
-
-        // Gắn Audio Source cho script
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.clip = attackAudioClip;
-        audioSource.volume = 0.5f;
 
         StartCoroutine(AttackLoop(currentAttackSpeed));
     }
@@ -57,14 +47,6 @@ public class Weapon : MonoBehaviour
 
             Quaternion rotation = Quaternion.Euler(0, 0, angle);
             transform.rotation = rotation;
-
-            //if(transform.eulerAngles.z > 90 && transform.eulerAngles.z < 270)
-            //{
-            //    transform.localScale = new Vector3(sizeWeapon, -sizeWeapon, 0);
-            //} else
-            //{
-            //    transform.localScale = new Vector3(sizeWeapon, sizeWeapon, 0);
-            //}
         }
     }
     IEnumerator AttackLoop(float delay)
@@ -76,7 +58,7 @@ public class Weapon : MonoBehaviour
             animator.SetBool("Attack", true);
             isAttacking = true;
 
-            audioSource.Play();
+            SoundManager.Instance.PlaySFX(sfxClipName);
 
             yield return new WaitForSeconds(0.5f);
             // Đoạn return này dùng để tránh setbool liên tục làm kiếm không đánh ra

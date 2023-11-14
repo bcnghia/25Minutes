@@ -55,7 +55,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         soundBackground.SetActive(true);
-        skill1Button.GetComponent<SpellCooldown>().Continue();
+        skill1Button.GetComponent<SpellCooldown>().Continue ();
 
         Time.timeScale = 1f;
         isPaused = false;

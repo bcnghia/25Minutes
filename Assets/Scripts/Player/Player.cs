@@ -20,7 +20,8 @@ public class Player : MonoBehaviour
 
     public bool isAttacking; // Tạo biến để xác định trạng thái tấn công
 
-    private GameObject soundBackground;
+    GameObject soundBackground;
+    float volumeSoundBackground;
     void Start()
     {
         currentHealth = maxHealth;
@@ -36,6 +37,7 @@ public class Player : MonoBehaviour
         isAttacking = false; // Ban đầu đặt trạng thái tấn công là false
 
         soundBackground = GameObject.FindGameObjectWithTag("AudioSource");
+        volumeSoundBackground = soundBackground.GetComponent<AudioSource>().volume;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
