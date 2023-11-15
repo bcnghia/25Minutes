@@ -8,10 +8,11 @@ public class PauseMenu : MonoBehaviour
 {
 
     [SerializeField] private GameObject pauseMenu;
-    [SerializeField] private GameObject soundBackground;
     [SerializeField] private bool isPaused;
     [SerializeField] private GameObject levelUpPanel;
     [SerializeField] private GameObject skill1Button;
+    [SerializeField] private GameObject pauseContainer;
+    [SerializeField] private GameObject settingContainer;
 
     bool activeLevelUp;
 
@@ -44,7 +45,7 @@ public class PauseMenu : MonoBehaviour
     public void PauseGame()
     {
         pauseMenu.SetActive(true);
-        soundBackground.SetActive(false);
+        //SoundManager.Instance.ToggleMusic();
         skill1Button.SetActive(false);
 
         Time.timeScale = 0f;
@@ -54,11 +55,17 @@ public class PauseMenu : MonoBehaviour
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
-        soundBackground.SetActive(true);
-        skill1Button.GetComponent<SpellCooldown>().Continue ();
+        //SoundManager.Instance.ToggleMusic();
+        skill1Button.GetComponent<SpellCooldown>().Continue();
 
         Time.timeScale = 1f;
         isPaused = false;
+    }
+
+    public void SettingsGame()
+    {
+        pauseContainer.SetActive(false);
+        settingContainer.SetActive(true);
     }
 
     public void QuitGame()

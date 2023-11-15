@@ -15,7 +15,7 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
     {
-        if(Instance == null)
+        if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
@@ -55,8 +55,23 @@ public class SoundManager : MonoBehaviour
         else Debug.Log("Sound Not Found");
     }
 
-    public void ChangeMasterVolume(float value)
+    public void ToggleMusic()
     {
-        AudioListener.volume = value;
+        musicSource.mute = !musicSource.mute;
+    }
+
+    public void ToggleSFX()
+    {
+        sfxSource.mute = !sfxSource.mute;
+    }
+
+    public void MusicVolume(float volume)
+    {
+        musicSource.volume = volume;
+    }
+
+    public void SFXVolume(float volume)
+    {
+        sfxSource.volume = volume;
     }
 }
