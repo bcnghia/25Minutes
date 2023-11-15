@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -23,6 +23,10 @@ public class MainMenu : MonoBehaviour
     public void StartGameplay()
     {
         SceneManager.LoadScene("Gameplay1");
+        // Sau này làm thêm tính năng chọn màn thì có thể LoadScene đó lên rồi load cả nhạc trùng với tên
+        SoundManager.Instance.PlayMusic("GamePlay1");
+
+        Time.timeScale = 1.0f;
     }
 
     public void SettingsGame()
