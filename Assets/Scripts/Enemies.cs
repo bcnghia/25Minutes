@@ -136,7 +136,7 @@ public class Enemies : MonoBehaviour
     void MoveNormally()
     {
         Vector2 position = transform.position;
-        position = new Vector2(position.x, position.y - moveSpeed * Time.deltaTime);
+        position = new Vector2(position.x, position.y - moveSpeed * Time.deltaTime * 2);
         transform.position = position;
 
         //if (Vector2.Distance(transform.position, player.position) > 3)

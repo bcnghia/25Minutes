@@ -6,11 +6,20 @@ using UnityEngine.SceneManagement;
 public class GameoverMenu : MonoBehaviour
 {
     public GameObject gameOverPanel;
+    public GameObject levelUpPanel;
     public string nameGameplayScene;
     public float remainingGameOver;
 
+    bool activeLevelUp;
+
     public void GameOver()
     {
+        activeLevelUp = levelUpPanel.GetComponent<ActivePanel>().isSetActive;
+        if (activeLevelUp)
+        {
+            // Đang bật Panel Nâng cấp thì tắt nó rồi game over
+            levelUpPanel.SetActive(false);
+        }
         gameOverPanel.SetActive(true);
 
         StartCoroutine(RemainingGameOver());

@@ -19,9 +19,6 @@ public class Player : MonoBehaviour
     //public Text level;
 
     public bool isAttacking; // Tạo biến để xác định trạng thái tấn công
-
-    GameObject soundBackground;
-    float volumeSoundBackground;
     void Start()
     {
         currentHealth = maxHealth;
@@ -35,9 +32,6 @@ public class Player : MonoBehaviour
         experienceBar.SetMaxExperience(maxExperience);
 
         isAttacking = false; // Ban đầu đặt trạng thái tấn công là false
-
-        soundBackground = GameObject.FindGameObjectWithTag("AudioSource");
-        volumeSoundBackground = soundBackground.GetComponent<AudioSource>().volume;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -107,8 +101,6 @@ public class Player : MonoBehaviour
         if(currentExperience >= maxExperience)
         {
             LevelUp();
-            // giảm âm lượng nhạc nền
-            soundBackground.GetComponent<AudioSource>().volume = 0.2f;
             // Lấy thông tin Buff Item
             ui.GetComponent<LevelUpMenu>().GetRandomBuffItem();
             // Hiện panel lvl Up sau khi đã load được Buff Item

@@ -10,7 +10,6 @@ public class LevelUpMenu : MonoBehaviour
     public GameObject skill1Button;
     public GameObject hpExp;
     
-    private GameObject soundBackground;
     [SerializeField] private List<GameObject> listBuffItems;
 
     [Header("Sprite Buff Item")]
@@ -23,10 +22,6 @@ public class LevelUpMenu : MonoBehaviour
     public TextMeshProUGUI desItem1, desItem2, desItem3;
 
     List<GameObject> randomBuffItems = new List<GameObject>();
-    void Start()
-    {
-        soundBackground = GameObject.FindGameObjectWithTag("AudioSource");
-    }
 
     public void GetRandomBuffItem()
     {
@@ -65,9 +60,6 @@ public class LevelUpMenu : MonoBehaviour
 
     private void UpgradeLevel()
     {
-        // tăng âm lượng lại như cũ 
-        // Note: trường hợp (như cũ ở đây đang là 0.6f), sau này phát triển thêm Setting Menu -> setting Audio thì tính tiếp
-        soundBackground.GetComponent<AudioSource>().volume = 0.6f;
         // ẩn panel nâng câp sau khi đã nâng
         levelUpPanel.SetActive(false);
         levelUpPanel.GetComponent<ActivePanel>().isSetActive = false;
