@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2068251107472928415}
-  - component: {fileID: 2226784088256304304}
   - component: {fileID: 7066974472606498872}
   - component: {fileID: 2845654143811323579}
+  - component: {fileID: 2226784088256304304}
   m_Layer: 0
   m_Name: Explosion 1
   m_TagString: Untagged
@@ -34,18 +34,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2226784088256304304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8044361183931621804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 228ca144e1d32354a8cd3598c14bb4f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &7066974472606498872
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -119,3 +107,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2226784088256304304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8044361183931621804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 228ca144e1d32354a8cd3598c14bb4f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

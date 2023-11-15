@@ -19,7 +19,7 @@ public class EnemyGun : MonoBehaviour
 
     void Shoot()
     {
-        GameObject playerShip = GameObject.Find("Spaceship");
+        GameObject playerShip = GameObject.Find("Player");
 
         if (playerShip != null) // Nếu người chơi không chết
         {

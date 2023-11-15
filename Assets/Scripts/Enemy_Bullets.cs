@@ -7,11 +7,12 @@ public class Enemy_Bullets : MonoBehaviour
     public float bulletSpeed;
     Vector2 _direction; // Hướng đạn bắn
     bool isReady; // Để biết khi nào hướng đạn được bắn
-    
+    Transform player; // Tham chiếu đến người chơi
 
     void Awake()
     {
         isReady = false;
+        player = GameObject.FindGameObjectWithTag("Player").transform; 
     }
 
     void Start()
@@ -29,26 +30,24 @@ public class Enemy_Bullets : MonoBehaviour
     {
         if (isReady)
         {
-            Vector2 position = transform.position;
-            position += _direction * bulletSpeed * Time.deltaTime;
-            transform.position = position;
-        }
+            // Nếu có thể tìm thấy người chơi
+            if (player != null)
+            {
+                // Hướng từ viên đạn đến người chơi
+                Vector2 directionToPlayer = (player.position - transform.position).normalized;
 
-        Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
-        Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
+                // Gán hướng di chuyển của đạn là hướng đến người chơi
+                _direction = directionToPlayer;
 
-        if ((transform.position.x < min.x) || (transform.position.x > max.x) ||
-           (transform.position.y < min.y) || (transform.position.y > max.y))
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "PlayerShip")
-        {
-            Destroy(gameObject);
+                // Di chuyển theo hướng mới
+                Vector2 position = transform.position;
+                position += _direction * bulletSpeed * Time.deltaTime;
+                transform.position = position;
+            }
+            else
+            {
+                Debug.LogError("Không tìm thấy đối tượng người chơi.");
+            }
         }
     }
 }
