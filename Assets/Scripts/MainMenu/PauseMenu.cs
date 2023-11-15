@@ -15,6 +15,8 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject settingContainer;
 
     bool activeLevelUp;
+    // Lưu tình trạng đóng mở của chức năng con
+    bool isActiveChild = false;
 
     void Start()
     {
@@ -30,14 +32,21 @@ public class PauseMenu : MonoBehaviour
             activeLevelUp = levelUpPanel.GetComponent<ActivePanel>().isSetActive;
             if (!activeLevelUp)
             {
-                if (isPaused)
+                //if (isPaused)
+                //{
+                //    ResumeGame();
+                //}
+                //else
+                //{
+                //    PauseGame();
+                //}
+                if (isActiveChild)
+                {
+                    ExitSetting();
+                } else if (isPaused)
                 {
                     ResumeGame();
-                }
-                else
-                {
-                    PauseGame();
-                }
+                } else PauseGame();
             }
         }
     }
@@ -64,8 +73,18 @@ public class PauseMenu : MonoBehaviour
 
     public void SettingsGame()
     {
+        isActiveChild = true;
+
         pauseContainer.SetActive(false);
         settingContainer.SetActive(true);
+    }
+
+    public void ExitSetting()
+    {
+        isActiveChild = false;
+
+        pauseContainer.SetActive(true);
+        settingContainer.SetActive(false);
     }
 
     public void QuitGame()

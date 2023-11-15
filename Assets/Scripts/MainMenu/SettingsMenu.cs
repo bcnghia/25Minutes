@@ -7,6 +7,12 @@ public class SettingsMenu : MonoBehaviour
 {
     public Slider musicSlider, sfxSlider;
 
+    private void Start()
+    {
+        musicSlider.value = SoundManager.Instance.GetMusicVolume();
+        sfxSlider.value = SoundManager.Instance.GetSFXVolume();
+    }
+
     public void ToggleMusic()
     {
         SoundManager.Instance.ToggleMusic();
