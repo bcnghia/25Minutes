@@ -60,7 +60,7 @@ public class Enemies : MonoBehaviour
                 // Nếu người chơi ở bên phải, không flip sprite
                 spriteRenderer.flipX = true;
             }
-        }
+        } else MoveNormally();
 
         if (chasingPlayer && playerTransform != null)
         {
@@ -116,12 +116,6 @@ public class Enemies : MonoBehaviour
         GameObject explosion = Instantiate(deathAnimation);
         explosion.transform.position = transform.position;
     }
-
-    // Hàm để bật hoặc tắt chế độ theo đuổi người chơi
-    //public void SetChasePlayer(bool chase)
-    //{
-    //    chasingPlayer = chase;
-    //}
 
     // Hàm để thực hiện hành động theo đuổi người chơi
     void ChasePlayer()

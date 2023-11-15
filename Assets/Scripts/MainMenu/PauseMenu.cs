@@ -32,14 +32,6 @@ public class PauseMenu : MonoBehaviour
             activeLevelUp = levelUpPanel.GetComponent<ActivePanel>().isSetActive;
             if (!activeLevelUp)
             {
-                //if (isPaused)
-                //{
-                //    ResumeGame();
-                //}
-                //else
-                //{
-                //    PauseGame();
-                //}
                 if (isActiveChild)
                 {
                     ExitSetting();

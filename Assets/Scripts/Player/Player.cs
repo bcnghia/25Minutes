@@ -75,7 +75,9 @@ public class Player : MonoBehaviour
         {
             currentHealth = 0;
             healthBar.SetHealth(currentHealth, maxHealth);
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
+            ui.GetComponent<GameoverMenu>().GameOver();
             Debug.Log("YOU ARE DEATH: " + damage);
         }
         else
