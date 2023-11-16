@@ -23,6 +23,7 @@ public class Enemies : MonoBehaviour
 
     [SerializeField] private int enemyDamage = 10; // Damage của quái
 
+    private bool beingAttacked = false;
 
     void Start()
     {
@@ -34,33 +35,14 @@ public class Enemies : MonoBehaviour
 
     }
 
-    public void TakeDamage(float damage)
-    {
-        health -= damage;
-
-        if (health <= 0)
-        {
-            Die();
-        }
-    }
-
     void Update()
     {
         if (playerTransform != null)
         {
             Vector3 direction = playerTransform.position - transform.position;
-
-            if (direction.x < 0)
-            {
-                // Nếu người chơi ở bên trái, flip sprite qua trái
-                spriteRenderer.flipX = false;
-            }
-            else if (direction.x > 0)
-            {
-                // Nếu người chơi ở bên phải, không flip sprite
-                spriteRenderer.flipX = true;
-            }
-        } else MoveNormally();
+            // direction.x kiểm tra người chơi đang ở bên phải hay bên trái mà flipX theo
+            spriteRenderer.flipX = (direction.x < 0) ? false : true;
+        }
 
         if (chasingPlayer && playerTransform != null)
         {
@@ -76,6 +58,16 @@ public class Enemies : MonoBehaviour
         if (transform.position.y < min.y)
         {
             Destroy(gameObject);
+        }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+
+        if (health <= 0)
+        {
+            Die();
         }
     }
 
@@ -97,20 +89,6 @@ public class Enemies : MonoBehaviour
         }
     }
 
-
-    private bool beingAttacked = false;
-
-    public void SetBeingAttacked(bool attacked)
-    {
-        beingAttacked = attacked;
-    }
-
-    public bool IsBeingAttacked()
-    {
-        return beingAttacked;
-    }
-
-
     void PlayExplosion()
     {
         GameObject explosion = Instantiate(deathAnimation);
@@ -120,29 +98,41 @@ public class Enemies : MonoBehaviour
     // Hàm để thực hiện hành động theo đuổi người chơi
     void ChasePlayer()
     {
-        // Thực hiện các hành động liên quan đến việc theo đuổi người chơi ở đây
-        // Ví dụ: Di chuyển theo hướng tới vị trí của người chơi
-        Vector3 direction = (playerTransform.position - transform.position).normalized;
-        transform.Translate(direction * moveSpeed * Time.deltaTime);
+        // Đặt khoảng cách offset từ Player
+        float offsetDistance = 8f;
+        // Khoảng cách (tầm) muốn kiểm tra với Enemy
+        float detectionRange = Random.Range(8f, 32f);
+        //float detectionRange = 10f;
 
-        //if (Vector2.Distance(transform.position, player.position) > 3)
-        //{
-        //    transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
-        //} // Nên dùng cho boss để boss giữ khoảng cách
+
+        // Tính khoảng cách giữa enemy và Player
+        float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
+        // Tính toán hướng từ enemy đến player
+        Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
+        // Tính toán vị trí mới dựa trên hướng và khoảng cách offSet
+        Vector3 targetPosition = playerTransform.position - directionToPlayer * offsetDistance;
+
+        // Kiểm tra nếu khoảng cách hiện tại nhỏ hơn khoảng cách cho trước
+        if (distanceToPlayer < detectionRange)
+        {
+            // Enemy đi thẳng đến player nếu khoảng cách hiện tại đã ở trong tầm cho trước
+            transform.Translate(directionToPlayer * moveSpeed * Time.deltaTime);
+        }
+        else
+        {
+            // Di chuyển enemy đến vị trí mới
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+        }
+        
     }
 
 
-    // Hàm để thực hiện hành động di chuyển thường
+    // Hàm để thực hiện hành động di chuyển xuống dưới Map khi Player Die
     void MoveNormally()
     {
         Vector2 position = transform.position;
         position = new Vector2(position.x, position.y - moveSpeed * Time.deltaTime * 2);
         transform.position = position;
-
-        //if (Vector2.Distance(transform.position, player.position) > 3)
-        //{
-        //    transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
-        //}
     }
 
     void Die()
@@ -155,6 +145,11 @@ public class Enemies : MonoBehaviour
         // Tăng Exp cho người chơi khi quái chết
         // hoặc muốn hợp lý thì tách riêng ra để khi đánh được quái thì bật, tránh khi quái tự đụng cũng có exp
         playerScript.IncreaseExp(enemyScore);
+    }
+
+    public bool IsBeingAttacked()
+    {
+        return beingAttacked;
     }
 
     public float GetHealth()
