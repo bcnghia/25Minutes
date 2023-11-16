@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7358008776018536204}
   - component: {fileID: 1692140590435357450}
   - component: {fileID: 6611011059665202262}
-  - component: {fileID: -7820503824813495546}
+  - component: {fileID: 730005713297594614}
   m_Layer: 0
   m_Name: summons
   m_TagString: Enemy
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootList:
   - {fileID: 11400000, guid: 85f83e5dbe631db47830d9b0a349d797, type: 2}
---- !u!114 &-7820503824813495546
+--- !u!114 &730005713297594614
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4235930181772671351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69cb5c30de89be440b49e43db5a002a5, type: 3}
+  m_Script: {fileID: 11500000, guid: 44084a563b3bc9f44b43f9800bf9f7dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 3
+  bulletSpeed: 2
