@@ -25,6 +25,11 @@ public class Enemies : MonoBehaviour
 
     private bool beingAttacked = false;
 
+    private float timeSinceSpawn; // Thời gian trôi qua kể từ khi quái sinh ra
+    // Biến để lưu giữ giá trị để tăng máu và damage
+    public float healthIncreaseRate = 5;
+    public float damageIncreaseRate = 2;
+
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
@@ -33,6 +38,8 @@ public class Enemies : MonoBehaviour
 
         spriteRenderer = GetComponent<SpriteRenderer>();
 
+        timeSinceSpawn = 0f; // Khởi tạo thời gian bằng 0
+        StartCoroutine(IncreaseStatsOverTime());
     }
 
     void Update()
@@ -59,6 +66,11 @@ public class Enemies : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+
+        // Cập nhật thời gian đã trôi qua (Để cứ 1 phút quái sẽ tăng máu và dmg)
+        timeSinceSpawn += Time.deltaTime;
+
     }
 
     public void TakeDamage(float damage)
@@ -155,5 +167,18 @@ public class Enemies : MonoBehaviour
     public float GetHealth()
     {
         return health;
+    }
+
+    IEnumerator IncreaseStatsOverTime()
+    {
+        while (true)
+        {
+            // Tăng máu và damage
+            health += healthIncreaseRate;
+            enemyDamage += Mathf.RoundToInt(damageIncreaseRate);
+
+            // Thời gian trước khi tăng tiếp
+            yield return new WaitForSeconds(60f); // Tăng lên sau khoảng 1 phút
+        }
     }
 }

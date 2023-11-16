@@ -55,6 +55,8 @@ MonoBehaviour:
   deathAnimation: {fileID: 8044361183931621804, guid: 8e3c47ae6aa0bac41a6658e1bda87f43, type: 3}
   chasingPlayer: 1
   enemyDamage: 10
+  healthIncreaseRate: 20
+  damageIncreaseRate: 5
 --- !u!114 &-2599151002485413861
 MonoBehaviour:
   m_ObjectHideFlags: 0
