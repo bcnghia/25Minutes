@@ -85,7 +85,7 @@ public class Player : MonoBehaviour
     {
         if (currentHealth < maxHealth)
         {
-            currentHealth += amountBlood;
+            currentHealth += Mathf.Ceil(amountBlood);
             if (currentHealth > maxHealth)
             {
                 currentHealth = maxHealth;

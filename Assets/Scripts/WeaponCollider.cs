@@ -30,16 +30,9 @@ public class WeaponCollider : MonoBehaviour
                 // Lượng máu hút được dựa trên tỉ lệ sát thương
                 float hpDamage = damage * ratioLifeSteal / 100;
                 // Lượng máu hút được dựa trên tỉ lệ máu của mục tiêu
-                float hpEnemies = collision.GetComponent<Enemies>().GetHealth() * ratioLifeSteal / 100;
-                
+
                 // CÂN BẰNG GAME -> Ưu tiên chọn lượng máu hút được thấp hơn nhằm tránh người chơi quá mạnh
-                if (hpDamage > hpEnemies)
-                {
-                    player.LifeSteal(hpEnemies);
-                } else
-                {
-                    player.LifeSteal(hpDamage);
-                }
+                player.LifeSteal(hpDamage);
             }
         }
     }
