@@ -1701,13 +1701,13 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.8431373, g: 0.10588236, b: 0.35686275, a: 1}
+    m_NormalColor: {r: 1, g: 0.85882354, b: 0, a: 1}
     m_HighlightedColor: {r: 0.93333334, g: 0.9254902, b: 0.13725491, a: 1}
     m_PressedColor: {r: 0.90588236, g: 0.61960787, b: 0.34509805, a: 1}
     m_SelectedColor: {r: 0.9372549, g: 0.9254902, b: 0.13725491, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
+    m_FadeDuration: 0.4
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
@@ -1756,8 +1756,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 0df91ca59d0cb92408671db398a9d1ca, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1787,7 +1787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txtButton: {fileID: 1529583372}
-  normalColorButton: '#4B7447'
+  normalColorButton: '#fcfcfa'
   scaleAmount: 1.2
   hoverSound: {fileID: 8300000, guid: 0a449a4785f09224081c841997b7b858, type: 3}
   defaultVolume: 0.5
@@ -2091,13 +2091,13 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.87843144, g: 0.10588236, b: 0.37254903, a: 1}
+    m_NormalColor: {r: 1, g: 0.85882354, b: 0, a: 1}
     m_HighlightedColor: {r: 0.93333334, g: 0.9254902, b: 0.13725491, a: 1}
     m_PressedColor: {r: 0.90588236, g: 0.61960787, b: 0.34509805, a: 1}
     m_SelectedColor: {r: 0.9339623, g: 0.9254285, b: 0.13656995, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
+    m_FadeDuration: 0.4
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
@@ -2146,8 +2146,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 0df91ca59d0cb92408671db398a9d1ca, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2177,7 +2177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txtButton: {fileID: 666790210}
-  normalColorButton: '#4B7447'
+  normalColorButton: '#fcfcfa'
   scaleAmount: 1.2
   hoverSound: {fileID: 8300000, guid: 0a449a4785f09224081c841997b7b858, type: 3}
   defaultVolume: 0.5
@@ -2762,13 +2762,13 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.91372555, g: 0.11764707, b: 0.38823533, a: 1}
+    m_NormalColor: {r: 1, g: 0.85783035, b: 0, a: 1}
     m_HighlightedColor: {r: 0.93333334, g: 0.9254902, b: 0.13725491, a: 1}
     m_PressedColor: {r: 0.9056604, g: 0.61829346, b: 0.34603062, a: 1}
     m_SelectedColor: {r: 0.9372549, g: 0.9254902, b: 0.13725491, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
+    m_FadeDuration: 0.4
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
@@ -2817,8 +2817,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 0df91ca59d0cb92408671db398a9d1ca, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2848,7 +2848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txtButton: {fileID: 1318348394}
-  normalColorButton: '#4B7447'
+  normalColorButton: '#fcfcfa'
   scaleAmount: 1.2
   hoverSound: {fileID: 8300000, guid: 0a449a4785f09224081c841997b7b858, type: 3}
   defaultVolume: 0.5

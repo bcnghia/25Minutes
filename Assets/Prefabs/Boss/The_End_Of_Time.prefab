@@ -230,7 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 120
   enemyScore: 1000
-  moveSpeed: 5
+  moveSpeed: 4
   deathAnimation: {fileID: 7164033524235681739, guid: e8776affa4e9ea34b8521fc5f350e99f, type: 3}
   chasingPlayer: 1
   enemyDamage: 100
