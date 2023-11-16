@@ -13,6 +13,7 @@ TagManager:
   - WeaponCollider
   - LevelUpPanel
   - AudioSource
+  - ColliderBound
   layers:
   - Default
   - TransparentFX

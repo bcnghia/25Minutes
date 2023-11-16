@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     float ratioSPD = 0f;
 
+    public float minX, maxX, minY, maxY;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -24,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         InputManagement();
+        ClampPosition(); // Thêm hàm này để giới hạn vị trí của người chơi
     }
 
 
@@ -43,6 +45,20 @@ public class PlayerMovement : MonoBehaviour
         }
         else animator.SetBool("IsWalking", false);
     }
+
+    void ClampPosition()
+    {
+        // Lấy vị trí hiện tại của người chơi
+        Vector3 currentPosition = transform.position;
+
+        // Giới hạn vị trí theo chiều X và Y
+        float clampedX = Mathf.Clamp(currentPosition.x, minX, maxX);
+        float clampedY = Mathf.Clamp(currentPosition.y, minY, maxY);
+
+        // Gán lại vị trí sau khi được giới hạn
+        transform.position = new Vector3(clampedX, clampedY, currentPosition.z);
+    }
+
     public void Move()
     {
         rb.velocity = new Vector2(moveDir.x * moveSpeed, moveDir.y * moveSpeed);
