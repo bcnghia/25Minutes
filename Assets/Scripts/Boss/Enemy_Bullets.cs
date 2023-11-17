@@ -30,7 +30,6 @@ public class Enemy_Bullets : MonoBehaviour
     {
         if (isReady)
         {
-            // Nếu có thể tìm thấy người chơi
             if (player != null)
             {
                 // Hướng từ viên đạn đến người chơi

@@ -17,30 +17,52 @@ public class Boss_Attack : StateMachineBehaviour
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        boss = GameObject.FindGameObjectWithTag("Player").transform;
+        try
+        {
+            boss = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+        catch
+        {
+            boss=null;
+        }
+
+        //boss = GameObject.FindGameObjectWithTag("Player").transform;
         rigidbody = animator.GetComponent<Rigidbody2D>();
         enemiesScript = animator.GetComponent<Enemies>();
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        // Kiểm tra xem quái vật có đang ở trong trạng thái đánh không
         if (stateInfo.IsTag("Attack") || stateInfo.IsTag("Attack2") || stateInfo.IsTag("Skill"))
         {
-            return; // Nếu đang đánh thì không làm gì cả
+            return; // Nếu đang đánh thì không làm gì 
         }
 
         // Kiểm tra khoảng cách và chuyển đến Attack hoặc Attack2 ngẫu nhiên
-        if (Vector2.Distance(boss.position, rigidbody.position) <= attackRange)
+        if(boss != null)
         {
-            int randomAttack = Random.Range(0, 3); // Random giữa 0 và 2 (bao gồm 0, 1, 2)
+            if (Vector2.Distance(boss.position, rigidbody.position) <= attackRange)
+            {
+                int randomAttack = Random.Range(0, 3); // Random giữa 0 và 2 (bao gồm 0, 1, 2)
 
-            if (randomAttack == 0)
-                animator.SetTrigger("Attack");
-            else if (randomAttack == 1)
-                animator.SetTrigger("Attack2");
-            else
-                animator.SetTrigger("Skill");
+                if (randomAttack == 0)
+                    animator.SetTrigger("Attack");
+                else if (randomAttack == 1)
+                    animator.SetTrigger("Attack2");
+                else
+                    animator.SetTrigger("Skill");
+            }
+
+            if (animator.GetBool("Skill") && _dashTime > 0 && isDashing)
+            {
+                Debug.Log("Kích hoạt kĩ năng");
+
+                float moveSpeed = enemiesScript.moveSpeed;
+
+                Vector2 dashDirection = ((Vector2)boss.position - (Vector2)rigidbody.position).normalized;
+                Vector2 dashVelocity = new Vector2(dashDirection.x * moveSpeed, rigidbody.velocity.y);
+                rigidbody.velocity = dashVelocity;
+            }
         }
 
         if (isSkillOnCooldown)
@@ -70,16 +92,16 @@ public class Boss_Attack : StateMachineBehaviour
             _cooldownTimer = skillCooldown;
         }
 
-        if (animator.GetBool("Skill") && _dashTime > 0 && isDashing)
-        {
-            Debug.Log("Kích hoạt kĩ năng");
+        //if (animator.GetBool("Skill") && _dashTime > 0 && isDashing)
+        //{
+        //    Debug.Log("Kích hoạt kĩ năng");
 
-            float moveSpeed = enemiesScript.moveSpeed;
+        //    float moveSpeed = enemiesScript.moveSpeed;
 
-            Vector2 dashDirection = ((Vector2)boss.position - (Vector2)rigidbody.position).normalized;
-            Vector2 dashVelocity = new Vector2(dashDirection.x * moveSpeed, rigidbody.velocity.y);
-            rigidbody.velocity = dashVelocity;
-        }
+        //    Vector2 dashDirection = ((Vector2)boss.position - (Vector2)rigidbody.position).normalized;
+        //    Vector2 dashVelocity = new Vector2(dashDirection.x * moveSpeed, rigidbody.velocity.y);
+        //    rigidbody.velocity = dashVelocity;
+        //}
 
         if (_dashTime <= 0 && isDashing)
         {

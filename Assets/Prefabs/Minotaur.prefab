@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6dd26ac5ea9fe428598c8a2bcdd7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300
+  health: 150
   enemyScore: 500
   moveSpeed: 4
   deathAnimation: {fileID: 3657072949397446863, guid: c592259d99af5e44a9c4a513df0efb0a, type: 3}

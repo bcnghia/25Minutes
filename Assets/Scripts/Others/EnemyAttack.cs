@@ -5,16 +5,22 @@ using UnityEngine;
 public class EnemyAttack : StateMachineBehaviour
 {
     public float attackRange = 4f;
+    Transform player;
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Transform player = GameObject.FindGameObjectWithTag("Player").transform;
+        try
+        {
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+        } catch { }
 
         // Kiểm tra khoảng cách giữa quái và người chơi
-        if (Vector2.Distance(animator.transform.position, player.position) <= attackRange)
+        if (player != null)
         {
-            // Khi đạt đến khoảng cách mong muốn, kích hoạt trigger "Attack"
-            animator.SetTrigger("Attack");
+            if (Vector2.Distance(animator.transform.position, player.position) <= attackRange)
+            {
+                animator.SetTrigger("Attack");
+            }
         }
     }
 

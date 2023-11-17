@@ -32,8 +32,14 @@ public class Enemies : MonoBehaviour
 
     void Start()
     {
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-        playerScript = playerTransform.GetComponent<Player>();
+        try
+        {
+            playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+            playerScript = playerTransform.GetComponent<Player>();
+        }
+        catch { }
+        //playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        //playerScript = playerTransform.GetComponent<Player>();
         //scoreUIText = GameObject.FindGameObjectWithTag("ScoreText");
 
         spriteRenderer = GetComponent<SpriteRenderer>();

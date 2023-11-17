@@ -279,9 +279,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6dd26ac5ea9fe428598c8a2bcdd7f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 500
+  health: 300
   enemyScore: 1000
-  moveSpeed: 5
+  moveSpeed: 4
   deathAnimation: {fileID: 7164033524235681739, guid: e8776affa4e9ea34b8521fc5f350e99f, type: 3}
   chasingPlayer: 1
   enemyDamage: 100
@@ -354,6 +354,8 @@ MonoBehaviour:
   - {fileID: -468488805, guid: fea9b73d00ccdb34db7376e6db1e0c8f, type: 3}
   - {fileID: -2115148626, guid: fea9b73d00ccdb34db7376e6db1e0c8f, type: 3}
   - {fileID: -129178563, guid: fea9b73d00ccdb34db7376e6db1e0c8f, type: 3}
+  - {fileID: -2115148626, guid: fea9b73d00ccdb34db7376e6db1e0c8f, type: 3}
+  - {fileID: -468488805, guid: fea9b73d00ccdb34db7376e6db1e0c8f, type: 3}
   animationTime: 0.2
   loop: 1
 --- !u!1 &4771297461532928078

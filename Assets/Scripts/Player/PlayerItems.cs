@@ -41,14 +41,5 @@ public class PlayerItems : MonoBehaviour
             isMagnet = true;
             magnetTimer = magnetDuration;
         }
-
-        //if (collision.tag == "Healing")
-        //{
-        //    //GetComponent<Player>().Healing();
-        //    //Debug.Log("Healing "+gameObject.name);
-        //    isHealing = true;
-        //    healingTimer = healingDuration;
-        //}
-
     }
 }
